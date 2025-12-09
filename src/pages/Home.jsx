@@ -56,7 +56,7 @@ const Home = () => {
                 </div>
 
                 {/* Content */}
-                <div className="relative z-10 max-w-7xl mx-auto px-6 py-20 w-full">
+                <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 py-12 md:py-20 w-full">
                     <div className="max-w-2xl">
                         <div className="inline-block mb-6" data-aos="fade-up">
                             <span className="px-4 py-2 bg-green-100 text-green-700 rounded-full text-sm font-medium uppercase tracking-wide">
@@ -64,7 +64,7 @@ const Home = () => {
                             </span>
                         </div>
 
-                        <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight" data-aos="fade-up" data-aos-delay="100">
+                        <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight" data-aos="fade-up" data-aos-delay="100">
                             <span className="text-gray-900">Transforming</span>{' '}
                             <span className="text-sky-600">Spaces, Visuals</span>{' '}
                             <span className="text-gray-900">&</span>{' '}
@@ -89,7 +89,7 @@ const Home = () => {
                         </div>
 
                         {/* Stats */}
-                        <div className="grid grid-cols-3 gap-8 mt-16">
+                        <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 mt-16">
                             <div data-aos="zoom-in" data-aos-delay="400">
                                 <div className="text-4xl md:text-5xl font-bold text-sky-600 mb-2">2+</div>
                                 <div className="text-gray-600">Happy Customers</div>
@@ -108,10 +108,10 @@ const Home = () => {
             </section>
 
             {/* Services Grid */}
-            <section className="py-20 px-6 bg-gradient-to-b from-white to-gray-50">
+            <section className="py-20 px-4 sm:px-6 bg-gradient-to-b from-white to-gray-50">
                 <div className="max-w-7xl mx-auto">
                     <div className="text-center mb-16">
-                        <h2 className="text-4xl md:text-5xl font-bold mb-4 text-gray-900" data-aos="fade-up">
+                        <h2 className="text-3xl md:text-5xl font-bold mb-4 text-gray-900" data-aos="fade-up">
                             Our Services
                         </h2>
                         <p className="text-gray-600 text-lg" data-aos="fade-up" data-aos-delay="100">
@@ -153,11 +153,11 @@ const Home = () => {
             </section>
 
             {/* About Section */}
-            <section className="py-20 px-6 bg-white">
+            <section className="py-20 px-4 sm:px-6 bg-white">
                 <div className="max-w-7xl mx-auto">
                     <div className="grid lg:grid-cols-2 gap-12 items-center">
                         <div data-aos="fade-right">
-                            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-900">
+                            <h2 className="text-3xl md:text-5xl font-bold mb-6 text-gray-900">
                                 Why Choose <span className="text-sky-600">VAS</span>?
                             </h2>
                             <p className="text-lg text-gray-600 mb-8 leading-relaxed">

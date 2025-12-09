@@ -77,12 +77,12 @@ const Header = () => {
             ? 'bg-white/95 backdrop-blur-md shadow-lg border-b border-gray-100'
             : 'bg-white border-b border-gray-100'
             }`}>
-            <nav className="max-w-7xl mx-auto px-6 py-2">
+            <nav className="max-w-7xl mx-auto px-4 sm:px-6 py-2">
                 <div className="flex items-center justify-between">
                     {/* Dynamic Logo */}
                     <Link
                         to="/"
-                        className={`text-2xl font-bold bg-gradient-to-r ${theme.logoGradient} bg-clip-text text-transparent transition-all duration-300 hover:scale-105`}
+                        className={`text-xl md:text-2xl font-bold bg-gradient-to-r ${theme.logoGradient} bg-clip-text text-transparent transition-all duration-300 hover:scale-105`}
                     >
                         VAS
                     </Link>
@@ -149,26 +149,28 @@ const Header = () => {
                 {/* Mobile Menu */}
                 {isMenuOpen && (
                     <div className="lg:hidden mt-4 pt-4 border-t border-gray-200 animate-slide-down">
-                        {menuItems.map((item) => (
+                        <div className="flex flex-col space-y-2">
+                            {menuItems.map((item) => (
+                                <Link
+                                    key={item.name}
+                                    to={item.path}
+                                    className={`block py-3 px-4 rounded-lg font-medium transition-colors ${isActive(item.path)
+                                        ? `${theme.activeColor} bg-gray-50`
+                                        : `text-gray-700 ${theme.hoverColor} hover:bg-gray-50`
+                                        }`}
+                                    onClick={() => setIsMenuOpen(false)}
+                                >
+                                    {item.name}
+                                </Link>
+                            ))}
                             <Link
-                                key={item.name}
-                                to={item.path}
-                                className={`block py-3 font-medium transition-colors ${isActive(item.path)
-                                    ? theme.activeColor
-                                    : `text-gray-700 ${theme.hoverColor}`
-                                    }`}
+                                to="/contact"
+                                className={`block mt-4 text-center px-6 py-3 bg-gradient-to-r ${theme.buttonGradient} text-white rounded-lg font-semibold shadow-md`}
                                 onClick={() => setIsMenuOpen(false)}
                             >
-                                {item.name}
+                                Get Started
                             </Link>
-                        ))}
-                        <Link
-                            to="/contact"
-                            className={`block mt-4 text-center px-6 py-2.5 bg-gradient-to-r ${theme.buttonGradient} text-white rounded-lg font-semibold`}
-                            onClick={() => setIsMenuOpen(false)}
-                        >
-                            Get Started
-                        </Link>
+                        </div>
                     </div>
                 )}
             </nav>

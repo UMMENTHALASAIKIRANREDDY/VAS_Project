@@ -19,7 +19,7 @@ const SoftwareServices = () => {
         <div className="animate-fade-in">
             {/* Hero Section with Side Design */}
             <section className="relative min-h-[80vh] flex items-center bg-gradient-to-br from-teal-50 to-cyan-100 overflow-hidden pt-12">
-                <div className="max-w-7xl mx-auto px-6 py-20 w-full">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 py-12 md:py-20 w-full">
                     <div className="grid lg:grid-cols-2 gap-12 items-center">
                         {/* Left - Content */}
                         <div>
@@ -29,7 +29,7 @@ const SoftwareServices = () => {
                                 </span>
                             </div>
 
-                            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight" data-aos="fade-up" data-aos-delay="100">
+                            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight" data-aos="fade-up" data-aos-delay="100">
                                 Ensuring Software Quality
                             </h1>
 
@@ -49,7 +49,7 @@ const SoftwareServices = () => {
                                 </button>
                             </div>
 
-                            <div className="grid grid-cols-3 gap-6" data-aos="fade-up" data-aos-delay="400">
+                            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6" data-aos="fade-up" data-aos-delay="400">
                                 <div>
                                     <div className="text-4xl font-bold bg-gradient-to-r from-teal-600 to-cyan-600 bg-clip-text text-transparent mb-2">99%</div>
                                     <div className="text-gray-600">Bug Detection</div>
@@ -67,20 +67,20 @@ const SoftwareServices = () => {
 
                         {/* Right - Visual Design */}
                         <div className="relative" data-aos="fade-left">
-                            <div className="grid grid-cols-2 gap-6">
+                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                                 <div className="bg-white rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all hover:-translate-y-2 aspect-square flex items-center justify-center">
                                     <div className="text-7xl">💻</div>
                                 </div>
 
-                                <div className="bg-gradient-to-br from-teal-400 to-cyan-500 rounded-3xl p-8 text-white shadow-xl hover:shadow-2xl transition-all hover:-translate-y-2 mt-12 aspect-square flex items-center justify-center">
+                                <div className="bg-gradient-to-br from-teal-400 to-cyan-500 rounded-3xl p-8 text-white shadow-xl hover:shadow-2xl transition-all hover:-translate-y-2 mt-0 sm:mt-12 aspect-square flex items-center justify-center">
                                     <div className="text-7xl">🔧</div>
                                 </div>
 
-                                <div className="bg-gradient-to-br from-cyan-400 to-teal-500 rounded-3xl p-8 text-white shadow-xl hover:shadow-2xl transition-all hover:-translate-y-2 -mt-12 aspect-square flex items-center justify-center">
+                                <div className="bg-gradient-to-br from-cyan-400 to-teal-500 rounded-3xl p-8 text-white shadow-xl hover:shadow-2xl transition-all hover:-translate-y-2 mt-4 sm:-mt-12 aspect-square flex items-center justify-center">
                                     <div className="text-7xl">⚡</div>
                                 </div>
 
-                                <div className="bg-white rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all hover:-translate-y-2 aspect-square flex items-center justify-center">
+                                <div className="bg-white rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all hover:-translate-y-2 mt-4 sm:mt-0 aspect-square flex items-center justify-center">
                                     <div className="text-7xl">✅</div>
                                 </div>
                             </div>
@@ -90,10 +90,10 @@ const SoftwareServices = () => {
             </section>
 
             {/* Services Section - Staggered Grid */}
-            <section className="py-20 px-6 bg-gradient-to-b from-white to-teal-50">
+            <section className="py-12 md:py-20 px-4 sm:px-6 bg-gradient-to-b from-white to-teal-50">
                 <div className="max-w-7xl mx-auto">
                     <div className="text-center mb-16">
-                        <h2 className="text-4xl md:text-5xl font-bold mb-4 text-gray-900" data-aos="fade-up">
+                        <h2 className="text-3xl md:text-5xl font-bold mb-4 text-gray-900" data-aos="fade-up">
                             Testing Services
                         </h2>
                         <p className="text-gray-600 text-lg max-w-3xl mx-auto" data-aos="fade-up" data-aos-delay="100">
@@ -121,10 +121,10 @@ const SoftwareServices = () => {
             </section>
 
             {/* Process Timeline */}
-            <section className="py-20 px-6 bg-white">
+            <section className="py-12 md:py-20 px-4 sm:px-6 bg-white">
                 <div className="max-w-7xl mx-auto">
                     <div className="text-center mb-16">
-                        <h2 className="text-4xl md:text-5xl font-bold mb-4 text-gray-900" data-aos="fade-up">
+                        <h2 className="text-3xl md:text-5xl font-bold mb-4 text-gray-900" data-aos="fade-up">
                             Our QA Process
                         </h2>
                         <p className="text-gray-600 text-lg" data-aos="fade-up" data-aos-delay="100">
@@ -162,10 +162,10 @@ const SoftwareServices = () => {
             </section>
 
             {/* CTA Section */}
-            <section className="py-20 px-6 bg-gradient-to-br from-teal-600 to-cyan-600">
+            <section className="py-12 md:py-20 px-4 sm:px-6 bg-gradient-to-br from-teal-600 to-cyan-600">
                 <div className="max-w-4xl mx-auto text-center">
                     <div className="text-7xl mb-6" data-aos="zoom-in">🚀</div>
-                    <h2 className="text-4xl md:text-5xl font-bold text-white mb-6" data-aos="fade-up">
+                    <h2 className="text-3xl md:text-5xl font-bold text-white mb-6" data-aos="fade-up">
                         Launch With Confidence
                     </h2>
                     <p className="text-teal-100 text-lg mb-8 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="100">

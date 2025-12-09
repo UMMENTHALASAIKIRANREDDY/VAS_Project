@@ -18,7 +18,7 @@ const VideoEditing = () => {
         <div className="animate-fade-in">
             {/* Hero Section with Side Design */}
             <section className="relative min-h-[80vh] flex items-center bg-gradient-to-br from-orange-50 to-red-100 overflow-hidden pt-12">
-                <div className="max-w-7xl mx-auto px-6 py-20 w-full">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 py-12 md:py-20 w-full">
                     <div className="grid lg:grid-cols-2 gap-12 items-center">
                         {/* Left - Content */}
                         <div>
@@ -28,7 +28,7 @@ const VideoEditing = () => {
                                 </span>
                             </div>
 
-                            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight" data-aos="fade-up" data-aos-delay="100">
+                            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight" data-aos="fade-up" data-aos-delay="100">
                                 Elevate Your Visual Content
                             </h1>
 
@@ -48,7 +48,7 @@ const VideoEditing = () => {
                                 </button>
                             </div>
 
-                            <div className="grid grid-cols-3 gap-6" data-aos="fade-up" data-aos-delay="400">
+                            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6" data-aos="fade-up" data-aos-delay="400">
                                 <div>
                                     <div className="text-4xl font-bold bg-gradient-to-r from-orange-600 to-red-600 bg-clip-text text-transparent mb-2">500+</div>
                                     <div className="text-gray-600">Videos Edited</div>
@@ -66,23 +66,23 @@ const VideoEditing = () => {
 
                         {/* Right - Visual Design */}
                         <div className="relative" data-aos="fade-left">
-                            <div className="grid grid-cols-2 gap-6">
+                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                                 <div className="bg-gradient-to-br from-orange-400 to-red-500 rounded-3xl p-8 text-white shadow-xl hover:shadow-2xl transition-all hover:-translate-y-2 aspect-square flex flex-col items-center justify-center">
                                     <div className="text-7xl mb-4">🎥</div>
                                     <h3 className="font-bold text-lg">Video Editing</h3>
                                 </div>
 
-                                <div className="bg-white rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all hover:-translate-y-2 mt-12 aspect-square flex flex-col items-center justify-center">
+                                <div className="bg-white rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all hover:-translate-y-2 mt-0 sm:mt-12 aspect-square flex flex-col items-center justify-center">
                                     <div className="text-7xl mb-4">📸</div>
                                     <h3 className="font-bold text-lg text-gray-900">Photo Retouching</h3>
                                 </div>
 
-                                <div className="bg-white rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all hover:-translate-y-2 -mt-12 aspect-square flex flex-col items-center justify-center">
+                                <div className="bg-white rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all hover:-translate-y-2 mt-4 sm:-mt-12 aspect-square flex flex-col items-center justify-center">
                                     <div className="text-7xl mb-4">🎬</div>
                                     <h3 className="font-bold text-lg text-gray-900">Production</h3>
                                 </div>
 
-                                <div className="bg-gradient-to-br from-red-400 to-orange-500 rounded-3xl p-8 text-white shadow-xl hover:shadow-2xl transition-all hover:-translate-y-2 aspect-square flex flex-col items-center justify-center">
+                                <div className="bg-gradient-to-br from-red-400 to-orange-500 rounded-3xl p-8 text-white shadow-xl hover:shadow-2xl transition-all hover:-translate-y-2 mt-4 sm:mt-0 aspect-square flex flex-col items-center justify-center">
                                     <div className="text-7xl mb-4">✨</div>
                                     <h3 className="font-bold text-lg">Effects</h3>
                                 </div>
@@ -93,10 +93,10 @@ const VideoEditing = () => {
             </section>
 
             {/* Services Section - Bento Box Layout */}
-            <section id="services" className="py-20 px-6 bg-gradient-to-b from-white to-orange-50">
+            <section id="services" className="py-12 md:py-20 px-4 sm:px-6 bg-gradient-to-b from-white to-orange-50">
                 <div className="max-w-7xl mx-auto">
                     <div className="text-center mb-16">
-                        <h2 className="text-4xl md:text-5xl font-bold mb-4 text-gray-900" data-aos="fade-up">
+                        <h2 className="text-3xl md:text-5xl font-bold mb-4 text-gray-900" data-aos="fade-up">
                             Our Editing Services
                         </h2>
                         <p className="text-gray-600 text-lg max-w-3xl mx-auto" data-aos="fade-up" data-aos-delay="100">
@@ -164,7 +164,7 @@ const VideoEditing = () => {
             </section>
 
             {/* Why Choose Us Section */}
-            <section className="py-20 px-6 bg-white">
+            <section className="py-12 md:py-20 px-4 sm:px-6 bg-white">
                 <div className="max-w-7xl mx-auto">
                     <div className="text-center mb-16">
                         <h2 className="text-4xl md:text-5xl font-bold mb-4 text-gray-900" data-aos="fade-up">
@@ -204,7 +204,7 @@ const VideoEditing = () => {
             </section>
 
             {/* Stats Section */}
-            <section className="py-20 px-6 bg-gradient-to-br from-orange-600 to-red-600 text-white">
+            <section className="py-12 md:py-20 px-4 sm:px-6 bg-gradient-to-br from-orange-600 to-red-600 text-white">
                 <div className="max-w-7xl mx-auto">
                     <div className="grid md:grid-cols-4 gap-8 text-center">
                         <div data-aos="fade-up">
@@ -228,10 +228,10 @@ const VideoEditing = () => {
             </section>
 
             {/* CTA Section */}
-            <section className="py-20 px-6 bg-white">
+            <section className="py-12 md:py-20 px-4 sm:px-6 bg-white">
                 <div className="max-w-4xl mx-auto text-center">
                     <div className="text-7xl mb-6" data-aos="zoom-in">🎬</div>
-                    <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6" data-aos="fade-up">
+                    <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6" data-aos="fade-up">
                         Ready to Create Something Amazing?
                     </h2>
                     <p className="text-gray-600 text-lg mb-8 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="100">

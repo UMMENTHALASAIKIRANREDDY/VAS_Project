@@ -8,11 +8,11 @@ const Hero = () => {
                 <div className="absolute top-1/2 left-1/2 w-80 h-80 bg-pink-300/20 rounded-full blur-3xl animate-float" style={{ animationDelay: '2s' }}></div>
             </div>
 
-            <div className="max-w-7xl mx-auto px-6 py-20 relative z-10">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 py-12 md:py-20 relative z-10">
                 <div className="grid lg:grid-cols-2 gap-12 items-center">
                     {/* Left Content */}
                     <div className="animate-slide-up">
-                        <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight mb-6">
+                        <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight mb-6">
                             Transforming{' '}
                             <span className="bg-gradient-to-r from-primary-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">
                                 Spaces, Visuals
@@ -50,7 +50,7 @@ const Hero = () => {
                         </div>
 
                         {/* Stats */}
-                        <div className="grid grid-cols-3 gap-8 mt-12">
+                        <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 mt-12">
                             <div>
                                 <div className="text-3xl font-bold text-primary-600">500+</div>
                                 <div className="text-gray-600 mt-1">Projects</div>
@@ -70,20 +70,20 @@ const Hero = () => {
                     <div className="relative animate-fade-in">
                         <div className="relative z-10">
                             {/* Service Cards Grid */}
-                            <div className="grid grid-cols-2 gap-6">
+                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                                 <div className="bg-white/80 backdrop-blur-sm p-6 rounded-2xl shadow-xl hover:shadow-2xl transition-all hover:-translate-y-2">
                                     <div className="text-5xl mb-3">🏠</div>
                                     <h3 className="font-bold text-lg mb-2">Interior Design</h3>
                                     <p className="text-gray-600 text-sm">3D models & planning</p>
                                 </div>
 
-                                <div className="bg-white/80 backdrop-blur-sm p-6 rounded-2xl shadow-xl hover:shadow-2xl transition-all hover:-translate-y-2 mt-8">
+                                <div className="bg-white/80 backdrop-blur-sm p-6 rounded-2xl shadow-xl hover:shadow-2xl transition-all hover:-translate-y-2 mt-0 sm:mt-8">
                                     <div className="text-5xl mb-3">🎬</div>
                                     <h3 className="font-bold text-lg mb-2">Video Editing</h3>
                                     <p className="text-gray-600 text-sm">Professional editing</p>
                                 </div>
 
-                                <div className="bg-white/80 backdrop-blur-sm p-6 rounded-2xl shadow-xl hover:shadow-2xl transition-all hover:-translate-y-2 -mt-4">
+                                <div className="bg-white/80 backdrop-blur-sm p-6 rounded-2xl shadow-xl hover:shadow-2xl transition-all hover:-translate-y-2 mt-4 sm:-mt-4">
                                     <div className="text-5xl mb-3">💻</div>
                                     <h3 className="font-bold text-lg mb-2">Software Testing</h3>
                                     <p className="text-gray-600 text-sm">QA & API testing</p>
