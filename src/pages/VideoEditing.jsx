@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 const VideoEditing = () => {
     const services = [
         { icon: '📸', title: 'Photo Retouching', description: 'Professional photo editing and retouching', size: 'large' },
@@ -17,7 +19,7 @@ const VideoEditing = () => {
     return (
         <div className="animate-fade-in">
             {/* Hero Section with Side Design */}
-            <section className="relative min-h-[80vh] flex items-center bg-gradient-to-br from-orange-50 to-red-100 overflow-hidden pt-12">
+            <section className="relative md:min-h-[80vh] flex bg-gradient-to-br from-orange-50 to-red-100 overflow-hidden pt-0">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 py-12 md:py-20 w-full">
                     <div className="grid lg:grid-cols-2 gap-12 items-center">
                         {/* Left - Content */}
@@ -37,13 +39,16 @@ const VideoEditing = () => {
                             </p>
 
                             <div className="flex flex-wrap gap-4 mb-8" data-aos="fade-up" data-aos-delay="300">
-                                <a
-                                    href="/contact"
+                                <Link
+                                    to="/contact"
                                     className="px-8 py-4 bg-gradient-to-r from-orange-600 to-red-600 text-white rounded-xl font-semibold hover:shadow-2xl hover:scale-105 transition-all duration-300"
                                 >
                                     Get Started
-                                </a>
-                                <button className="px-8 py-4 bg-white border-2 border-orange-600 text-orange-600 rounded-xl font-semibold hover:bg-orange-50 transition-all duration-300">
+                                </Link>
+                                <button
+                                    onClick={() => document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' })}
+                                    className="px-8 py-4 bg-white border-2 border-orange-600 text-orange-600 rounded-xl font-semibold hover:bg-orange-50 transition-all duration-300"
+                                >
                                     View Portfolio
                                 </button>
                             </div>
@@ -237,14 +242,14 @@ const VideoEditing = () => {
                     <p className="text-gray-600 text-lg mb-8 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="100">
                         Let's bring your creative vision to life. Contact us today to discuss your project and get a free quote.
                     </p>
-                    <a
-                        href="/contact"
+                    <Link
+                        to="/contact"
                         className="inline-block px-10 py-4 bg-gradient-to-r from-orange-600 to-red-600 text-white rounded-xl font-semibold hover:shadow-2xl hover:shadow-orange-500/50 transition-all hover:scale-105"
                         data-aos="fade-up"
                         data-aos-delay="200"
                     >
                         Start Your Project Today
-                    </a>
+                    </Link>
                 </div>
             </section>
         </div>

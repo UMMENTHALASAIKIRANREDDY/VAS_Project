@@ -13,7 +13,7 @@ const ClientsPage = () => {
     return (
         <div className="animate-fade-in">
             {/* Hero Section with Side Design */}
-            <section className="relative min-h-[70vh] flex items-center bg-gradient-to-br from-blue-50 to-indigo-100 overflow-hidden pt-12">
+            <section className="relative min-h-[70vh] flex items-center bg-gradient-to-br from-blue-50 to-indigo-100 overflow-hidden pt-0">
                 <div className="max-w-7xl mx-auto px-6 py-16 w-full">
                     <div className="grid lg:grid-cols-2 gap-12 items-center">
                         {/* Left - Content */}

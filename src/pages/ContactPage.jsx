@@ -23,7 +23,7 @@ const ContactPage = () => {
     return (
         <div className="animate-fade-in">
             {/* Hero Section with Side Design */}
-            <section className="relative min-h-[70vh] flex items-center bg-gradient-to-br from-blue-50 to-indigo-100 overflow-hidden pt-12">
+            <section className="relative min-h-[70vh] flex items-center bg-gradient-to-br from-blue-50 to-indigo-100 overflow-hidden pt-0">
                 <div className="max-w-7xl mx-auto px-6 py-16 w-full">
                     <div className="grid lg:grid-cols-2 gap-12 items-center">
                         {/* Left - Content */}
@@ -156,7 +156,7 @@ const ContactPage = () => {
                         </div>
 
                         {/* Contact Form */}
-                        <div className="bg-gradient-to-br from-sky-50 to-indigo-50 rounded-2xl p-8" data-aos="fade-left">
+                        <div id="contact-form" className="bg-gradient-to-br from-sky-50 to-indigo-50 rounded-2xl p-8" data-aos="fade-left">
                             <h3 className="text-2xl font-bold mb-6 text-gray-900">Send us a Message</h3>
                             <form onSubmit={handleSubmit} className="space-y-4">
                                 <div>

@@ -28,9 +28,9 @@ const Home = () => {
     return (
         <div className="animate-fade-in">
             {/* Hero Section */}
-            <section className="relative min-h-screen flex items-center bg-white overflow-hidden">
-                {/* Curved Blob Background */}
-                <div className="absolute right-0 top-0 w-[55%] h-full">
+            <section className="relative min-h-[auto] md:min-h-screen flex flex-col md:block md:flex-row items-center bg-white overflow-hidden pb-8 md:pt-0 md:pb-0">
+                {/* Curved Blob Background - Hidden on mobile or adjusted */}
+                <div className="absolute right-0 top-0 w-full md:w-[55%] h-full opacity-10 md:opacity-100 pointer-events-none">
                     <svg className="absolute inset-0 w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
                         <path
                             d="M 30,0 Q 20,50 30,100 L 100,100 L 100,0 Z"
@@ -44,8 +44,8 @@ const Home = () => {
                         </defs>
                     </svg>
 
-                    {/* Floating Icons */}
-                    <div className="absolute inset-0 flex items-center justify-center">
+                    {/* Floating Icons - Hidden on small mobile to prevent clutter */}
+                    <div className="absolute inset-0 flex items-center justify-center hidden sm:flex">
                         <div className="grid grid-cols-2 gap-12 p-12">
                             <div className="text-white/30 text-8xl animate-float" data-aos="fade-left" data-aos-delay="200">🏢</div>
                             <div className="text-white/30 text-8xl animate-float" data-aos="fade-left" data-aos-delay="400" style={{ animationDelay: '0.5s' }}>☁️</div>
@@ -56,30 +56,30 @@ const Home = () => {
                 </div>
 
                 {/* Content */}
-                <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 py-12 md:py-20 w-full">
-                    <div className="max-w-2xl">
-                        <div className="inline-block mb-6" data-aos="fade-up">
-                            <span className="px-4 py-2 bg-green-100 text-green-700 rounded-full text-sm font-medium uppercase tracking-wide">
+                <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 w-full md:flex md:items-center md:h-screen">
+                    <div className="max-w-2xl text-center md:text-left pt-4 md:pt-0">
+                        <div className="inline-block mb-4 md:mb-6" data-aos="fade-up">
+                            <span className="px-4 py-2 bg-green-100 text-green-700 rounded-full text-xs md:text-sm font-medium uppercase tracking-wide">
                                 Starting our journey in 2019
                             </span>
                         </div>
 
-                        <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight" data-aos="fade-up" data-aos-delay="100">
+                        <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold mb-4 md:mb-6 leading-tight" data-aos="fade-up" data-aos-delay="100">
                             <span className="text-gray-900">Transforming</span>{' '}
-                            <span className="text-sky-600">Spaces, Visuals</span>{' '}
+                            <span className="text-sky-600 block md:inline">Spaces, Visuals</span>{' '}
                             <span className="text-gray-900">&</span>{' '}
-                            <span className="text-gray-900">Software Quality</span>
+                            <span className="text-gray-900 block md:inline">Software Quality</span>
                         </h1>
 
-                        <p className="text-lg md:text-xl text-gray-600 mb-8 leading-relaxed max-w-xl" data-aos="fade-up" data-aos-delay="200">
+                        <p className="text-base md:text-xl text-gray-600 mb-6 md:mb-8 leading-relaxed max-w-xl mx-auto md:mx-0" data-aos="fade-up" data-aos-delay="200">
                             Securely deliver exceptional results in interior design, image & video editing,
                             and comprehensive software testing with our professional solutions.
                         </p>
 
-                        <div data-aos="fade-up" data-aos-delay="300">
+                        <div data-aos="fade-up" data-aos-delay="300" className="flex justify-center md:justify-start">
                             <Link
                                 to="/contact"
-                                className="inline-flex items-center px-8 py-4 bg-sky-600 text-white rounded-lg font-semibold hover:bg-sky-700 hover:shadow-xl transition-all duration-300 hover:scale-105"
+                                className="inline-flex items-center px-6 py-3 md:px-8 md:py-4 bg-sky-600 text-white rounded-lg font-semibold hover:bg-sky-700 hover:shadow-xl transition-all duration-300 hover:scale-105"
                             >
                                 Get Started
                                 <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -89,18 +89,18 @@ const Home = () => {
                         </div>
 
                         {/* Stats */}
-                        <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 mt-16">
+                        <div className="grid grid-cols-3 gap-4 md:gap-8 mt-8 md:mt-16">
                             <div data-aos="zoom-in" data-aos-delay="400">
-                                <div className="text-4xl md:text-5xl font-bold text-sky-600 mb-2">2+</div>
-                                <div className="text-gray-600">Happy Customers</div>
+                                <div className="text-2xl md:text-5xl font-bold text-sky-600 mb-1 md:mb-2">2+</div>
+                                <div className="text-xs md:text-base text-gray-600">Happy Customers</div>
                             </div>
                             <div data-aos="zoom-in" data-aos-delay="500">
-                                <div className="text-4xl md:text-5xl font-bold text-sky-600 mb-2">3</div>
-                                <div className="text-gray-600">Services</div>
+                                <div className="text-2xl md:text-5xl font-bold text-sky-600 mb-1 md:mb-2">3</div>
+                                <div className="text-xs md:text-base text-gray-600">Services</div>
                             </div>
                             <div data-aos="zoom-in" data-aos-delay="600">
-                                <div className="text-4xl md:text-5xl font-bold text-sky-600 mb-2">2019</div>
-                                <div className="text-gray-600">Founded</div>
+                                <div className="text-2xl md:text-5xl font-bold text-sky-600 mb-1 md:mb-2">2019</div>
+                                <div className="text-xs md:text-base text-gray-600">Founded</div>
                             </div>
                         </div>
                     </div>

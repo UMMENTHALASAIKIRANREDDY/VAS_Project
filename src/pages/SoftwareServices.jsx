@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 const SoftwareServices = () => {
     const services = [
         { icon: '🔍', title: 'Manual Testing', description: 'Comprehensive manual testing services', color: 'from-teal-500 to-cyan-600' },
@@ -18,7 +20,7 @@ const SoftwareServices = () => {
     return (
         <div className="animate-fade-in">
             {/* Hero Section with Side Design */}
-            <section className="relative min-h-[80vh] flex items-center bg-gradient-to-br from-teal-50 to-cyan-100 overflow-hidden pt-12">
+            <section className="relative md:min-h-[80vh] flex bg-gradient-to-br from-teal-50 to-cyan-100 overflow-hidden pt-0">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 py-12 md:py-20 w-full">
                     <div className="grid lg:grid-cols-2 gap-12 items-center">
                         {/* Left - Content */}
@@ -38,13 +40,16 @@ const SoftwareServices = () => {
                             </p>
 
                             <div className="flex flex-wrap gap-4 mb-8" data-aos="fade-up" data-aos-delay="300">
-                                <a
-                                    href="/contact"
+                                <Link
+                                    to="/contact"
                                     className="px-8 py-4 bg-gradient-to-r from-teal-600 to-cyan-600 text-white rounded-xl font-semibold hover:shadow-2xl hover:scale-105 transition-all duration-300"
                                 >
                                     Get Started
-                                </a>
-                                <button className="px-8 py-4 bg-white border-2 border-teal-600 text-teal-600 rounded-xl font-semibold hover:bg-teal-50 transition-all duration-300">
+                                </Link>
+                                <button
+                                    onClick={() => document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' })}
+                                    className="px-8 py-4 bg-white border-2 border-teal-600 text-teal-600 rounded-xl font-semibold hover:bg-teal-50 transition-all duration-300"
+                                >
                                     View Services
                                 </button>
                             </div>
@@ -90,7 +95,7 @@ const SoftwareServices = () => {
             </section>
 
             {/* Services Section - Staggered Grid */}
-            <section className="py-12 md:py-20 px-4 sm:px-6 bg-gradient-to-b from-white to-teal-50">
+            <section id="services" className="py-12 md:py-20 px-4 sm:px-6 bg-gradient-to-b from-white to-teal-50">
                 <div className="max-w-7xl mx-auto">
                     <div className="text-center mb-16">
                         <h2 className="text-3xl md:text-5xl font-bold mb-4 text-gray-900" data-aos="fade-up">
@@ -171,14 +176,14 @@ const SoftwareServices = () => {
                     <p className="text-teal-100 text-lg mb-8 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="100">
                         Ensure your software is production-ready with our comprehensive quality assurance services.
                     </p>
-                    <a
-                        href="/contact"
+                    <Link
+                        to="/contact"
                         className="inline-block px-10 py-4 bg-white text-teal-600 rounded-lg font-semibold hover:shadow-2xl transition-all hover:scale-105"
                         data-aos="fade-up"
                         data-aos-delay="200"
                     >
                         Start Testing Today
-                    </a>
+                    </Link>
                 </div>
             </section>
         </div>

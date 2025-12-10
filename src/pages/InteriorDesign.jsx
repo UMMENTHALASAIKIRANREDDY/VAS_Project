@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 const InteriorDesign = () => {
     const services = [
         {
@@ -55,8 +57,8 @@ const InteriorDesign = () => {
     return (
         <div className="animate-fade-in">
             {/* Hero Section with Side Design */}
-            <section className="relative min-h-[80vh] flex items-center bg-gradient-to-br from-violet-50 to-purple-100 overflow-hidden pt-12">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 py-12 md:py-20 w-full">
+            <section className="relative md:min-h-[80vh] flex bg-gradient-to-br from-violet-50 to-purple-100 overflow-hidden pt-0">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 py-8 md:py-20 w-full">
                     <div className="grid lg:grid-cols-2 gap-12 items-center">
                         {/* Left - Content */}
                         <div>
@@ -75,13 +77,16 @@ const InteriorDesign = () => {
                             </p>
 
                             <div className="flex flex-wrap gap-4 mb-8" data-aos="fade-up" data-aos-delay="300">
-                                <a
-                                    href="/contact"
+                                <Link
+                                    to="/contact"
                                     className="px-8 py-4 bg-gradient-to-r from-violet-600 to-purple-600 text-white rounded-xl font-semibold hover:shadow-2xl hover:scale-105 transition-all duration-300"
                                 >
                                     Start Your Project
-                                </a>
-                                <button className="px-8 py-4 bg-white border-2 border-violet-600 text-violet-600 rounded-xl font-semibold hover:bg-violet-50 transition-all duration-300">
+                                </Link>
+                                <button
+                                    onClick={() => document.getElementById('portfolio')?.scrollIntoView({ behavior: 'smooth' })}
+                                    className="px-8 py-4 bg-white border-2 border-violet-600 text-violet-600 rounded-xl font-semibold hover:bg-violet-50 transition-all duration-300"
+                                >
                                     View Portfolio
                                 </button>
                             </div>
@@ -111,7 +116,7 @@ const InteriorDesign = () => {
                                     <p className="text-sm text-gray-600">Photorealistic visuals</p>
                                 </div>
 
-                                <div className="bg-gradient-to-br from-violet-600 to-purple-600 rounded-3xl p-8 text-white shadow-xl hover:shadow-2xl transition-all hover:-translate-y-2 mt-0 sm:mt-8 aspect-square flex flex-col items-center justify-center">
+                                <div className="bg-gradient-to-br from-violet-600 to-purple-600 rounded-3xl p-8 text-white shadow-xl hover:shadow-2xl transition-all hover:-translate-y-2 mt-4 sm:mt-8 aspect-square flex flex-col items-center justify-center">
                                     <div className="text-7xl mb-4">🎨</div>
                                     <h3 className="font-bold text-lg mb-2">Design</h3>
                                     <p className="text-sm text-violet-100">Expert styling</p>
@@ -221,7 +226,7 @@ const InteriorDesign = () => {
             </section>
 
             {/* Portfolio Section with Parallax Cards */}
-            <section className="py-12 md:py-20 px-4 sm:px-6 bg-white">
+            <section id="portfolio" className="py-12 md:py-20 px-4 sm:px-6 bg-white">
                 <div className="max-w-7xl mx-auto">
                     <div className="text-center mb-16">
                         <h2 className="text-3xl md:text-5xl font-bold mb-4 text-gray-900" data-aos="fade-up">
@@ -312,14 +317,14 @@ const InteriorDesign = () => {
                     <p className="text-violet-100 text-lg mb-8 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="100">
                         Let's create something extraordinary together. Get in touch to start your interior design journey.
                     </p>
-                    <a
-                        href="/contact"
+                    <Link
+                        to="/contact"
                         className="inline-block px-10 py-4 bg-white text-violet-600 rounded-lg font-semibold hover:shadow-2xl transition-all hover:scale-105"
                         data-aos="fade-up"
                         data-aos-delay="200"
                     >
                         Get Started Today
-                    </a>
+                    </Link>
                 </div>
             </section>
         </div>
