@@ -10,7 +10,34 @@ const ContactPage = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log('Form submitted:', formData);
+
+        // Destructure form data
+        const { name, email, service, message } = formData;
+
+        // --- WhatsApp Logic ---
+        const phoneNumber = "916305790865"; // User's WhatsApp number with country code
+        const whatsappMessage = `*New Inquiry via Website* %0A%0A*Name:* ${name}%0A*Email:* ${email}%0A*Service:* ${service}%0A*Message:* ${message}`;
+        const whatsappUrl = `https://wa.me/${phoneNumber}?text=${whatsappMessage}`;
+
+        // --- Email Logic (Mailto) ---
+        const mailToLink = `mailto:saikiranreddy7547@gmail.com?subject=New Enquiry from ${name} - ${service}&body=Name: ${name}%0D%0AEmail: ${email}%0D%0AService: ${service}%0D%0AMessage: ${message}`;
+
+        // Open WhatsApp in a new tab
+        window.open(whatsappUrl, '_blank');
+
+        // Trigger Email Client
+        // Using a small timeout to ensure the browser processes the window.open first
+        setTimeout(() => {
+            window.location.href = mailToLink;
+        }, 500);
+
+        // Reset form (optional)
+        setFormData({
+            name: '',
+            email: '',
+            service: 'Interior Design',
+            message: ''
+        });
     };
 
     const handleChange = (e) => {
@@ -46,7 +73,7 @@ const ContactPage = () => {
                                 <a href="#contact-form" className="px-8 py-4 bg-gradient-to-r from-blue-600 to-indigo-600 text-white rounded-xl font-semibold hover:shadow-2xl hover:scale-105 transition-all">
                                     Send Message
                                 </a>
-                                <a href="https://wa.me/919000065111" target="_blank" rel="noopener noreferrer" className="px-8 py-4 bg-white border-2 border-blue-600 text-blue-600 rounded-xl font-semibold hover:bg-blue-50 transition-all">
+                                <a href="https://wa.me/6305790865" target="_blank" rel="noopener noreferrer" className="px-8 py-4 bg-white border-2 border-blue-600 text-blue-600 rounded-xl font-semibold hover:bg-blue-50 transition-all">
                                     WhatsApp
                                 </a>
                             </div>
@@ -56,17 +83,17 @@ const ContactPage = () => {
                         <div className="relative" data-aos="fade-left">
                             <div className="grid grid-cols-2 gap-6">
                                 {/* Email Card */}
-                                <div className="bg-white rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all hover:-translate-y-2 aspect-square flex flex-col items-center justify-center">
+                                <div className="bg-white rounded-3xl p-4 md:p-8 shadow-xl hover:shadow-2xl transition-all hover:-translate-y-2 aspect-square flex flex-col items-center justify-center">
                                     <div className="text-7xl mb-4">📧</div>
                                     <h3 className="font-bold text-lg mb-2">Email Us</h3>
-                                    <p className="text-sm text-gray-600 text-center">vasagencies01@gmail.com</p>
+                                    <p className="text-sm text-gray-600 text-center break-all">saikiranreddy7547@gmail.com</p>
                                 </div>
 
                                 {/* Phone Card */}
                                 <div className="bg-gradient-to-br from-blue-600 to-indigo-600 rounded-3xl p-8 text-white shadow-xl hover:shadow-2xl transition-all hover:-translate-y-2 mt-8 aspect-square flex flex-col items-center justify-center">
                                     <div className="text-7xl mb-4">📱</div>
                                     <h3 className="font-bold text-lg mb-2">Call Us</h3>
-                                    <p className="text-sm text-blue-100">+91 9000065111</p>
+                                    <p className="text-sm text-blue-100">+91 6305790865</p>
                                 </div>
 
                                 {/* Location Card */}
@@ -122,7 +149,7 @@ const ContactPage = () => {
                                     </div>
                                     <div>
                                         <h3 className="font-semibold text-lg mb-1">Phone</h3>
-                                        <p className="text-gray-600">+91 98765 43210</p>
+                                        <p className="text-gray-600">+91 6305790865</p>
                                     </div>
                                 </div>
 
@@ -135,7 +162,7 @@ const ContactPage = () => {
                                     </div>
                                     <div>
                                         <h3 className="font-semibold text-lg mb-1">Location</h3>
-                                        <p className="text-gray-600">Your City, Country</p>
+                                        <p className="text-gray-600">Hyderabad, India</p>
                                     </div>
                                 </div>
 

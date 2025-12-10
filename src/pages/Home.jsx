@@ -60,7 +60,7 @@ const Home = () => {
                     <div className="max-w-2xl text-center md:text-left pt-4 md:pt-0">
                         <div className="inline-block mb-4 md:mb-6" data-aos="fade-up">
                             <span className="px-4 py-2 bg-green-100 text-green-700 rounded-full text-xs md:text-sm font-medium uppercase tracking-wide">
-                                Starting our journey in 2019
+                                Started our journey in 2025
                             </span>
                         </div>
 
