@@ -5,118 +5,122 @@ const Home = () => {
         {
             title: 'Interior Design',
             icon: '🏠',
-            description: '3D models, modular kitchen, layout planning',
+            description: 'Transform your living spaces with our premium 3D modeling and layout planning services.',
             link: '/interior-design',
-            gradient: 'from-blue-500 to-cyan-500'
+            color: 'blue'
         },
         {
             title: 'Video Editing',
             icon: '🎬',
-            description: 'Photo retouching, event editing, promo videos',
+            description: 'Professional video production, event coverage, and cinematic storytelling.',
             link: '/video-editing',
-            gradient: 'from-purple-500 to-pink-500'
+            color: 'purple'
         },
         {
             title: 'Software Services',
             icon: '💻',
-            description: 'Manual testing, API testing, QA',
+            description: 'Comprehensive QA testing and software solutions to ensure digital excellence.',
             link: '/software-services',
-            gradient: 'from-green-500 to-emerald-500'
+            color: 'emerald'
         },
     ];
 
     return (
-        <div className="animate-fade-in">
+        <div className="animate-fade-in overflow-hidden">
             {/* Hero Section */}
-            <section className="relative min-h-[auto] md:min-h-screen flex flex-col md:block md:flex-row items-center bg-white overflow-hidden pb-8 md:pt-0 md:pb-0">
-                {/* Curved Blob Background - Hidden on mobile or adjusted */}
-                <div className="absolute right-0 top-0 w-full md:w-[55%] h-full opacity-10 md:opacity-100 pointer-events-none">
-                    <svg className="absolute inset-0 w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
-                        <path
-                            d="M 30,0 Q 20,50 30,100 L 100,100 L 100,0 Z"
-                            fill="url(#blueGradient)"
-                        />
-                        <defs>
-                            <linearGradient id="blueGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                                <stop offset="0%" style={{ stopColor: '#0EA5E9', stopOpacity: 1 }} />
-                                <stop offset="100%" style={{ stopColor: '#0284C7', stopOpacity: 1 }} />
-                            </linearGradient>
-                        </defs>
-                    </svg>
-
-                    {/* Floating Icons - Hidden on small mobile to prevent clutter */}
-                    <div className="absolute inset-0 flex items-center justify-center hidden sm:flex">
-                        <div className="grid grid-cols-2 gap-12 p-12">
-                            <div className="text-white/30 text-8xl animate-float" data-aos="fade-left" data-aos-delay="200">🏢</div>
-                            <div className="text-white/30 text-8xl animate-float" data-aos="fade-left" data-aos-delay="400" style={{ animationDelay: '0.5s' }}>☁️</div>
-                            <div className="text-white/30 text-8xl animate-float" data-aos="fade-left" data-aos-delay="600" style={{ animationDelay: '1s' }}>💻</div>
-                            <div className="text-white/30 text-8xl animate-float" data-aos="fade-left" data-aos-delay="800" style={{ animationDelay: '1.5s' }}>🎬</div>
-                        </div>
-                    </div>
+            <section className="relative min-h-[90vh] flex items-center bg-slate-900 border-b border-gray-800">
+                {/* Abstract Background */}
+                <div className="absolute inset-0 overflow-hidden">
+                    <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-sky-500/20 rounded-full blur-[120px] -translate-y-1/2 translate-x-1/3"></div>
+                    <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-purple-500/20 rounded-full blur-[100px] translate-y-1/3 -translate-x-1/3"></div>
                 </div>
 
-                {/* Content */}
-                <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 w-full md:flex md:items-center md:h-screen">
-                    <div className="max-w-2xl text-center md:text-left pt-4 md:pt-0">
-                        <div className="inline-block mb-4 md:mb-6" data-aos="fade-up">
-                            <span className="px-4 py-2 bg-green-100 text-green-700 rounded-full text-xs md:text-sm font-medium uppercase tracking-wide">
-                                Started our journey in 2025
-                            </span>
+                <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 w-full pt-20">
+                    <div className="grid lg:grid-cols-2 gap-12 items-center">
+                        <div className="text-center lg:text-left">
+                            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 backdrop-blur-sm mb-6" data-aos="fade-down">
+                                <span className="w-2 h-2 rounded-full bg-sky-400 animate-pulse"></span>
+                                <span className="text-sky-300 text-sm font-medium tracking-wide">Innovating Since 2019</span>
+                            </div>
+
+                            <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold text-white mb-6 leading-tight tracking-tight" data-aos="fade-up" data-aos-delay="100">
+                                Designing <br />
+                                <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-400 via-indigo-400 to-purple-400">Experiences.</span>
+                            </h1>
+
+                            <p className="text-lg text-gray-400 mb-8 max-w-xl mx-auto lg:mx-0 leading-relaxed" data-aos="fade-up" data-aos-delay="200">
+                                From stunning interior spaces to captivating video content and flawless software performance, VAS delivers excellence across every dimension.
+                            </p>
+
+                            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start" data-aos="fade-up" data-aos-delay="300">
+                                <Link
+                                    to="/contact"
+                                    className="px-8 py-4 bg-sky-600 hover:bg-sky-500 text-white rounded-xl font-semibold transition-all hover:scale-105 shadow-lg shadow-sky-500/25 flex items-center justify-center gap-2"
+                                >
+                                    Start Your Project
+                                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+                                </Link>
+                                <div className="flex gap-4 sm:gap-8 px-8 py-4 rounded-xl border border-white/10 bg-white/5 backdrop-blur-sm justify-center">
+                                    <div className="text-center">
+                                        <div className="text-2xl font-bold text-white">2+</div>
+                                        <div className="text-xs text-gray-400 uppercase tracking-wider">Clients</div>
+                                    </div>
+                                    <div className="w-px bg-white/10"></div>
+                                    <div className="text-center">
+                                        <div className="text-2xl font-bold text-white">100%</div>
+                                        <div className="text-xs text-gray-400 uppercase tracking-wider">Success</div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
 
-                        <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold mb-4 md:mb-6 leading-tight" data-aos="fade-up" data-aos-delay="100">
-                            <span className="text-gray-900">Transforming</span>{' '}
-                            <span className="text-sky-600 block md:inline">Spaces, Visuals</span>{' '}
-                            <span className="text-gray-900">&</span>{' '}
-                            <span className="text-gray-900 block md:inline">Software Quality</span>
-                        </h1>
+                        {/* Hero Visual */}
+                        <div className="relative lg:h-[600px] hidden lg:block" data-aos="fade-left">
+                            <div className="absolute inset-0 bg-gradient-to-tr from-sky-500/10 to-purple-500/10 rounded-full blur-3xl"></div>
+                            <div className="glass-card absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-md aspect-square rounded-[3rem] border border-white/10 bg-white/5 backdrop-blur-md overflow-hidden shadow-2xl">
+                                <div className="absolute inset-0 bg-gradient-to-br from-sky-500/10 to-transparent"></div>
+                                <div className="p-12 h-full flex flex-col justify-between relative">
+                                    <div className="flex justify-between items-start">
+                                        <div className="p-4 bg-sky-500/20 rounded-2xl">
+                                            <span className="text-4xl">🎨</span>
+                                        </div>
+                                        <div className="flex -space-x-4">
+                                            {[1, 2, 3].map((i) => (
+                                                <div key={i} className="w-12 h-12 rounded-full border-2 border-gray-800 bg-gray-700 flex items-center justify-center text-xs">
+                                                    User
+                                                </div>
+                                            ))}
+                                        </div>
+                                    </div>
 
-                        <p className="text-base md:text-xl text-gray-600 mb-6 md:mb-8 leading-relaxed max-w-xl mx-auto md:mx-0" data-aos="fade-up" data-aos-delay="200">
-                            Securely deliver exceptional results in interior design, image & video editing,
-                            and comprehensive software testing with our professional solutions.
-                        </p>
-
-                        <div data-aos="fade-up" data-aos-delay="300" className="flex justify-center md:justify-start">
-                            <Link
-                                to="/contact"
-                                className="inline-flex items-center px-6 py-3 md:px-8 md:py-4 bg-sky-600 text-white rounded-lg font-semibold hover:bg-sky-700 hover:shadow-xl transition-all duration-300 hover:scale-105"
-                            >
-                                Get Started
-                                <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                                </svg>
-                            </Link>
-                        </div>
-
-                        {/* Stats */}
-                        <div className="grid grid-cols-3 gap-4 md:gap-8 mt-8 md:mt-16">
-                            <div data-aos="zoom-in" data-aos-delay="400">
-                                <div className="text-2xl md:text-5xl font-bold text-sky-600 mb-1 md:mb-2">2+</div>
-                                <div className="text-xs md:text-base text-gray-600">Happy Customers</div>
+                                    <div className="space-y-4">
+                                        <div className="h-2 w-3/4 bg-white/10 rounded-full"></div>
+                                        <div className="h-2 w-1/2 bg-white/10 rounded-full"></div>
+                                        <div className="h-32 w-full bg-gradient-to-r from-sky-500/20 to-purple-500/20 rounded-2xl flex items-center justify-center border border-white/5 mt-6">
+                                            <span className="text-white/50 text-sm tracking-widest font-mono">DIGITAL EXCELLENCE</span>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                            <div data-aos="zoom-in" data-aos-delay="500">
-                                <div className="text-2xl md:text-5xl font-bold text-sky-600 mb-1 md:mb-2">3</div>
-                                <div className="text-xs md:text-base text-gray-600">Services</div>
+
+                            {/* Floating Elements */}
+                            <div className="absolute top-20 right-20 p-4 bg-gray-800/80 backdrop-blur border border-gray-700 rounded-2xl shadow-xl animate-float-slow">
+                                <span className="text-3xl">💻</span>
                             </div>
-                            <div data-aos="zoom-in" data-aos-delay="600">
-                                <div className="text-2xl md:text-5xl font-bold text-sky-600 mb-1 md:mb-2">2019</div>
-                                <div className="text-xs md:text-base text-gray-600">Founded</div>
+                            <div className="absolute bottom-40 left-10 p-4 bg-gray-800/80 backdrop-blur border border-gray-700 rounded-2xl shadow-xl animate-float" style={{ animationDelay: '1s' }}>
+                                <span className="text-3xl">🎬</span>
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
 
-            {/* Services Grid */}
-            <section className="py-20 px-4 sm:px-6 bg-gradient-to-b from-white to-gray-50">
+            {/* Services Section */}
+            <section className="py-24 px-4 bg-gray-50">
                 <div className="max-w-7xl mx-auto">
                     <div className="text-center mb-16">
-                        <h2 className="text-3xl md:text-5xl font-bold mb-4 text-gray-900" data-aos="fade-up">
-                            Our Services
-                        </h2>
-                        <p className="text-gray-600 text-lg" data-aos="fade-up" data-aos-delay="100">
-                            Comprehensive solutions tailored to your needs
-                        </p>
+                        <span className="text-sky-600 font-semibold tracking-wider uppercase text-sm">What We Do</span>
+                        <h2 className="text-4xl font-bold text-gray-900 mt-2">Premium Services</h2>
                     </div>
 
                     <div className="grid md:grid-cols-3 gap-8">
@@ -124,27 +128,22 @@ const Home = () => {
                             <Link
                                 key={index}
                                 to={service.link}
-                                className="group bg-white rounded-2xl p-8 shadow-lg border border-gray-100 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2"
+                                className="group relative bg-white rounded-3xl p-8 hover:-translate-y-2 transition-all duration-300 shadow-xl shadow-gray-200/50 hover:shadow-2xl hover:shadow-sky-500/10 border border-gray-100 overflow-hidden"
                                 data-aos="fade-up"
                                 data-aos-delay={index * 100}
                             >
-                                <div className={`w-20 h-20 bg-gradient-to-br ${service.gradient} rounded-2xl flex items-center justify-center text-4xl mb-6 group-hover:scale-110 transition-transform`}>
+                                <div className={`absolute top-0 right-0 w-32 h-32 bg-${service.color}-500/5 rounded-full blur-3xl group-hover:bg-${service.color}-500/10 transition-colors`}></div>
+
+                                <div className={`w-14 h-14 rounded-2xl bg-gradient-to-br from-${service.color}-500 to-${service.color}-600 flex items-center justify-center text-2xl mb-6 shadow-lg shadow-${service.color}-500/30 group-hover:scale-110 transition-transform duration-300`}>
                                     {service.icon}
                                 </div>
 
-                                <h3 className="text-2xl font-bold mb-3 text-gray-900">
-                                    {service.title}
-                                </h3>
+                                <h3 className="text-xl font-bold text-gray-900 mb-3">{service.title}</h3>
+                                <p className="text-gray-600 mb-6 leading-relaxed">{service.description}</p>
 
-                                <p className="text-gray-600 mb-6">
-                                    {service.description}
-                                </p>
-
-                                <div className="flex items-center text-sky-600 font-semibold">
-                                    Learn More
-                                    <svg className="w-5 h-5 ml-2 group-hover:translate-x-2 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                                    </svg>
+                                <div className={`flex items-center text-${service.color}-600 font-semibold group-hover:gap-2 transition-all`}>
+                                    Explore Service
+                                    <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
                                 </div>
                             </Link>
                         ))}
@@ -152,39 +151,47 @@ const Home = () => {
                 </div>
             </section>
 
-            {/* About Section */}
-            <section className="py-20 px-4 sm:px-6 bg-white">
-                <div className="max-w-7xl mx-auto">
-                    <div className="grid lg:grid-cols-2 gap-12 items-center">
-                        <div data-aos="fade-right">
-                            <h2 className="text-3xl md:text-5xl font-bold mb-6 text-gray-900">
-                                Why Choose <span className="text-sky-600">VAS</span>?
-                            </h2>
-                            <p className="text-lg text-gray-600 mb-8 leading-relaxed">
-                                We combine creativity, technology, and expertise to deliver exceptional results.
-                                Our team is dedicated to transforming your vision into reality with precision and care.
-                            </p>
-
-                            <div className="space-y-4">
-                                {['Professional Excellence', 'On-Time Delivery', 'Customer Satisfaction', 'Innovative Solutions'].map((item, idx) => (
-                                    <div key={idx} className="flex items-center gap-3" data-aos="fade-up" data-aos-delay={idx * 100}>
-                                        <div className="flex-shrink-0 w-8 h-8 bg-sky-500 rounded-full flex items-center justify-center">
-                                            <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                                            </svg>
-                                        </div>
-                                        <span className="text-gray-700 font-medium">{item}</span>
-                                    </div>
-                                ))}
-                            </div>
+            {/* Mission / Why Us */}
+            <section className="py-24 bg-white relative overflow-hidden">
+                <div className="max-w-7xl mx-auto px-4">
+                    <div className="bg-slate-900 rounded-[3rem] p-8 md:p-16 relative overflow-hidden text-center md:text-left">
+                        {/* Decor */}
+                        <div className="absolute top-0 left-0 w-full h-full">
+                            <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-sky-500/10 rounded-full blur-[100px]"></div>
                         </div>
 
-                        <div className="relative" data-aos="fade-left">
-                            <div className="aspect-square bg-gradient-to-br from-sky-100 to-indigo-100 rounded-3xl p-12 flex items-center justify-center shadow-xl">
-                                <div className="text-center">
-                                    <div className="text-6xl mb-4">🎯</div>
-                                    <h3 className="text-2xl font-bold text-gray-900 mb-2">Our Mission</h3>
-                                    <p className="text-gray-600">Delivering excellence in every project we undertake</p>
+                        <div className="relative z-10 grid lg:grid-cols-2 gap-12 items-center">
+                            <div>
+                                <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                                    Why Partner With <span className="text-sky-400">VAS</span>?
+                                </h2>
+                                <p className="text-gray-400 text-lg mb-8 leading-relaxed">
+                                    We bring a unique blend of creative artistry and technical precision to every project. Whether it's crafting the perfect living space or ensuring your software is bug-free, we deliver perfection.
+                                </p>
+                                <div className="grid grid-cols-2 gap-6">
+                                    {[
+                                        { title: 'Expert Team', desc: 'Skilled professionals' },
+                                        { title: 'Modern Tech', desc: 'Latest tools & stack' },
+                                        { title: '24/7 Support', desc: 'Always available' },
+                                        { title: 'Fast Delivery', desc: 'On-time execution' }
+                                    ].map((item, idx) => (
+                                        <div key={idx} className="p-4 rounded-xl bg-white/5 border border-white/10">
+                                            <h4 className="text-white font-semibold mb-1">{item.title}</h4>
+                                            <p className="text-gray-500 text-sm">{item.desc}</p>
+                                        </div>
+                                    ))}
+                                </div>
+                            </div>
+
+                            <div className="relative">
+                                <div className="aspect-video rounded-2xl bg-gradient-to-br from-gray-800 to-gray-900 border border-white/10 p-8 flex items-center justify-center">
+                                    <div className="text-center">
+                                        <span className="text-6xl mb-4 block">🚀</span>
+                                        <h3 className="text-2xl font-bold text-white">Let's Grow Together</h3>
+                                        <Link to="/contact" className="inline-block mt-6 text-sky-400 hover:text-sky-300 font-medium">
+                                            Get in touch &rarr;
+                                        </Link>
+                                    </div>
                                 </div>
                             </div>
                         </div>

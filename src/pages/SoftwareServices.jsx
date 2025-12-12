@@ -73,20 +73,24 @@ const SoftwareServices = () => {
                         {/* Right - Visual Design */}
                         <div className="relative" data-aos="fade-left">
                             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                                <div className="bg-white rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all hover:-translate-y-2 aspect-square flex items-center justify-center">
-                                    <div className="text-7xl">💻</div>
+                                <div className="bg-white rounded-3xl p-6 shadow-xl hover:shadow-2xl transition-all hover:-translate-y-2 aspect-square flex flex-col items-center justify-center text-center">
+                                    <div className="text-5xl md:text-6xl mb-3">💻</div>
+                                    <span className="font-bold text-gray-800 text-sm md:text-base">Development</span>
                                 </div>
 
-                                <div className="bg-gradient-to-br from-teal-400 to-cyan-500 rounded-3xl p-8 text-white shadow-xl hover:shadow-2xl transition-all hover:-translate-y-2 mt-0 sm:mt-12 aspect-square flex items-center justify-center">
-                                    <div className="text-7xl">🔧</div>
+                                <div className="bg-gradient-to-br from-teal-400 to-cyan-500 rounded-3xl p-6 text-white shadow-xl hover:shadow-2xl transition-all hover:-translate-y-2 mt-0 sm:mt-12 aspect-square flex flex-col items-center justify-center text-center">
+                                    <div className="text-5xl md:text-6xl mb-3">🔧</div>
+                                    <span className="font-bold text-white text-sm md:text-base">Maintenance</span>
                                 </div>
 
-                                <div className="bg-gradient-to-br from-cyan-400 to-teal-500 rounded-3xl p-8 text-white shadow-xl hover:shadow-2xl transition-all hover:-translate-y-2 mt-4 sm:-mt-12 aspect-square flex items-center justify-center">
-                                    <div className="text-7xl">⚡</div>
+                                <div className="bg-gradient-to-br from-cyan-400 to-teal-500 rounded-3xl p-6 text-white shadow-xl hover:shadow-2xl transition-all hover:-translate-y-2 mt-4 sm:-mt-12 aspect-square flex flex-col items-center justify-center text-center">
+                                    <div className="text-5xl md:text-6xl mb-3">⚡</div>
+                                    <span className="font-bold text-white text-sm md:text-base">Performance</span>
                                 </div>
 
-                                <div className="bg-white rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all hover:-translate-y-2 mt-4 sm:mt-0 aspect-square flex items-center justify-center">
-                                    <div className="text-7xl">✅</div>
+                                <div className="bg-white rounded-3xl p-6 shadow-xl hover:shadow-2xl transition-all hover:-translate-y-2 mt-4 sm:mt-0 aspect-square flex flex-col items-center justify-center text-center">
+                                    <div className="text-5xl md:text-6xl mb-3">✅</div>
+                                    <span className="font-bold text-gray-800 text-sm md:text-base">Quality</span>
                                 </div>
                             </div>
                         </div>

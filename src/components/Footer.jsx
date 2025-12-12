@@ -22,9 +22,9 @@ const Footer = () => {
                                     <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
                                 </svg>
                             </a>
-                            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="w-8 h-8 rounded-full bg-gradient-to-br from-purple-600 to-pink-600 flex items-center justify-center hover:from-purple-700 hover:to-pink-700 transition-colors">
+                            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center hover:bg-gradient-to-br hover:from-purple-600 hover:to-pink-600 transition-all duration-300">
                                 <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-                                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                                    <path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2zm0 1.5A4.25 4.25 0 0 0 3.5 7.75v8.5a4.25 4.25 0 0 0 4.25 4.25h8.5a4.25 4.25 0 0 0 4.25-4.25v-8.5a4.25 4.25 0 0 0-4.25-4.25h-8.5zm4.25 4a4.5 4.5 0 1 1 0 9 4.5 4.5 0 0 1 0-9zm0 1.5a3 3 0 1 0 0 6 3 3 0 0 0 0-6zm5.25-3.5a1.25 1.25 0 1 1 0 2.5 1.25 1.25 0 0 1 0-2.5z" />
                                 </svg>
                             </a>
                             <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition-colors">
@@ -45,7 +45,7 @@ const Footer = () => {
                     <div>
                         <h4 className="text-base font-semibold mb-3">Quick Links</h4>
                         <ul className="space-y-2 text-sm">
-                            <li><Link to="/" className="text-gray-300 hover:text-sky-400 transition-colors">Home</Link></li>
+                            <li><Link to="/" onClick={() => window.scrollTo(0, 0)} className="text-gray-300 hover:text-sky-400 transition-colors">Home</Link></li>
                             <li><Link to="/interior-design" className="text-gray-300 hover:text-sky-400 transition-colors">Interior Design</Link></li>
                             <li><Link to="/video-editing" className="text-gray-300 hover:text-sky-400 transition-colors">Video Editing</Link></li>
                             <li><Link to="/software-services" className="text-gray-300 hover:text-sky-400 transition-colors">Software Services</Link></li>
@@ -56,11 +56,78 @@ const Footer = () => {
                     <div>
                         <h4 className="text-base font-semibold mb-3">Contact</h4>
                         <ul className="space-y-2 text-gray-300 text-sm">
-                            <li>saikiranreddy7547@gmail.com</li>
-                            <li>+91 6305790865</li>
-                            <li>Hyderabad, India</li>
+
+                            <li>
+                                <a
+                                    href="mailto:saikiranreddy7547@gmail.com"
+                                    onClick={(e) => {
+                                        navigator.clipboard.writeText('saikiranreddy7547@gmail.com');
+                                        const el = document.getElementById('toast-notification');
+                                        if (el) {
+                                            el.classList.remove('translate-y-20', 'opacity-0');
+                                            setTimeout(() => el.classList.add('translate-y-20', 'opacity-0'), 2000);
+                                        }
+                                    }}
+                                    className="flex items-center gap-2 hover:text-sky-400 transition-colors text-left w-full group"
+                                >
+                                    <svg className="w-5 h-5 text-sky-500 flex-shrink-0" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24">
+                                        <path strokeLinecap="round" strokeLinejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
+                                    </svg>
+                                    <span>saikiranreddy7547@gmail.com</span>
+                                    <span className="opacity-0 group-hover:opacity-100 text-xs bg-gray-700 px-1.5 py-0.5 rounded text-gray-300 transition-opacity whitespace-nowrap">Open & Copy</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a
+                                    href="tel:+916305790865"
+                                    onClick={(e) => {
+                                        navigator.clipboard.writeText('+91 6305790865');
+                                        const el = document.getElementById('toast-notification');
+                                        if (el) {
+                                            el.classList.remove('translate-y-20', 'opacity-0');
+                                            setTimeout(() => el.classList.add('translate-y-20', 'opacity-0'), 2000);
+                                        }
+                                    }}
+                                    className="flex items-center gap-2 hover:text-sky-400 transition-colors text-left w-full group"
+                                >
+                                    <svg className="w-5 h-5 text-sky-500 flex-shrink-0" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24">
+                                        <path strokeLinecap="round" strokeLinejoin="round" d="M10.5 1.5H8.25A2.25 2.25 0 006 3.75v16.5a2.25 2.25 0 002.25 2.25h7.5A2.25 2.25 0 0018 20.25V3.75a2.25 2.25 0 00-2.25-2.25H13.5m-3 0V3h3V1.5m-3 0h3m-3 18.75h3" />
+                                    </svg>
+                                    <span>+91 6305790865</span>
+                                    <span className="opacity-0 group-hover:opacity-100 text-xs bg-gray-700 px-1.5 py-0.5 rounded text-gray-300 transition-opacity whitespace-nowrap">Call & Copy</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a
+                                    href="https://www.google.com/maps/search/?api=1&query=Hyderabad,India"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    onClick={(e) => {
+                                        navigator.clipboard.writeText('Hyderabad, India');
+                                        const el = document.getElementById('toast-notification');
+                                        if (el) {
+                                            el.classList.remove('translate-y-20', 'opacity-0');
+                                            setTimeout(() => el.classList.add('translate-y-20', 'opacity-0'), 2000);
+                                        }
+                                    }}
+                                    className="flex items-center gap-2 hover:text-sky-400 transition-colors text-left w-full group"
+                                >
+                                    <svg className="w-5 h-5 text-sky-500 flex-shrink-0" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24">
+                                        <path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
+                                        <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
+                                    </svg>
+                                    <span>Hyderabad, India</span>
+                                    <span className="opacity-0 group-hover:opacity-100 text-xs bg-gray-700 px-1.5 py-0.5 rounded text-gray-300 transition-opacity whitespace-nowrap">Map & Copy</span>
+                                </a>
+                            </li>
                         </ul>
                     </div>
+                </div>
+
+                {/* Toast Notification */}
+                <div id="toast-notification" className="fixed bottom-8 left-1/2 -translate-x-1/2 bg-gray-900 text-white px-4 py-2 rounded-lg shadow-xl border border-gray-700 flex items-center gap-2 transform transition-all duration-300 translate-y-20 opacity-0 z-50 pointer-events-none">
+                    <svg className="w-4 h-4 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
+                    <span className="text-sm font-medium">Copied & Opened!</span>
                 </div>
 
                 <div className="border-t border-gray-700 pt-4 flex flex-col md:flex-row justify-between items-center gap-4 text-sm">
