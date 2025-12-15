@@ -11,6 +11,20 @@ const ContactPage = () => {
     const [submitAction, setSubmitAction] = useState(null);
     const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
+    const scrollToForm = (e) => {
+        e.preventDefault();
+        const element = document.getElementById('contact-form');
+        // Offset for header height
+        const headerOffset = 100;
+        const elementPosition = element.getBoundingClientRect().top;
+        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+        window.scrollTo({
+            top: offsetPosition,
+            behavior: "smooth"
+        });
+    };
+
     const handleSubmit = (e) => {
         e.preventDefault();
 
@@ -26,7 +40,11 @@ const ContactPage = () => {
         } else if (submitAction === 'email') {
             // --- Email Logic (Mailto) ---
             const mailToLink = `mailto:saikiranreddy7547@gmail.com?subject=New Enquiry from ${name} - ${service}&body=Name: ${name}%0D%0AEmail: ${email}%0D%0AService: ${service}%0D%0AMessage: ${message}`;
-            window.location.href = mailToLink;
+
+            // Safer way to open mailto without navigation events impacting the page
+            const link = document.createElement('a');
+            link.href = mailToLink;
+            link.click();
         }
 
         // Reset form (optional)
@@ -71,7 +89,11 @@ const ContactPage = () => {
                             </div>
 
                             <div className="flex gap-4 mb-6" data-aos="fade-up" data-aos-delay="300">
-                                <a href="#contact-form" className="px-8 py-3 bg-gradient-to-r from-blue-600 to-indigo-600 text-white rounded-xl font-semibold hover:shadow-2xl hover:scale-105 transition-all text-sm">
+                                <a
+                                    href="#contact-form"
+                                    onClick={scrollToForm}
+                                    className="px-8 py-3 bg-gradient-to-r from-blue-600 to-indigo-600 text-white rounded-xl font-semibold hover:shadow-2xl hover:scale-105 transition-all text-sm"
+                                >
                                     Send Message
                                 </a>
                             </div>
@@ -81,32 +103,44 @@ const ContactPage = () => {
                         <div className="relative" data-aos="fade-left">
                             <div className="grid grid-cols-2 gap-4">
                                 {/* Email Card */}
-                                <div className="bg-white rounded-2xl p-4 shadow-xl hover:shadow-2xl transition-all hover:-translate-y-2 aspect-square flex flex-col items-center justify-center">
-                                    <div className="text-5xl mb-3">📧</div>
-                                    <h3 className="font-bold text-base mb-1">Email Us</h3>
-                                    <p className="text-xs text-gray-600 text-center break-all">saikiranreddy7547@gmail.com</p>
-                                </div>
+                                <a href="mailto:saikiranreddy7547@gmail.com" className="group bg-white rounded-2xl p-4 shadow-xl hover:shadow-2xl transition-all hover:-translate-y-2 aspect-square flex flex-col items-center justify-center cursor-pointer relative overflow-hidden">
+                                    <div className="absolute bottom-0 left-0 w-full h-0 group-hover:h-full bg-gradient-to-br from-blue-500 to-indigo-600 transition-all duration-500 ease-out z-0"></div>
+                                    <div className="relative z-10 flex flex-col items-center">
+                                        <div className="text-5xl mb-3 group-hover:scale-110 transition-transform">📧</div>
+                                        <h3 className="font-bold text-base mb-1 text-gray-900 group-hover:text-white transition-colors">Email Us</h3>
+                                        <p className="text-xs text-gray-600 text-center break-all group-hover:text-blue-100 transition-colors">saikiranreddy7547@gmail.com</p>
+                                    </div>
+                                </a>
 
                                 {/* Phone Card */}
-                                <div className="bg-gradient-to-br from-blue-600 to-indigo-600 rounded-2xl p-4 text-white shadow-xl hover:shadow-2xl transition-all hover:-translate-y-2 mt-6 aspect-square flex flex-col items-center justify-center">
-                                    <div className="text-5xl mb-3">📱</div>
-                                    <h3 className="font-bold text-base mb-1">Call Us</h3>
-                                    <p className="text-xs text-blue-100">+91 6305790865</p>
-                                </div>
+                                <a href="tel:+916305790865" className="group bg-gradient-to-br from-blue-600 to-indigo-600 rounded-2xl p-4 shadow-xl hover:shadow-2xl transition-all hover:-translate-y-2 mt-6 aspect-square flex flex-col items-center justify-center cursor-pointer relative overflow-hidden">
+                                    <div className="absolute bottom-0 left-0 w-full h-0 group-hover:h-full bg-white transition-all duration-500 ease-out z-0"></div>
+                                    <div className="relative z-10 flex flex-col items-center">
+                                        <div className="text-5xl mb-3 group-hover:scale-110 transition-transform">📱</div>
+                                        <h3 className="font-bold text-base mb-1 text-white group-hover:text-blue-900 transition-colors">Call Us</h3>
+                                        <p className="text-xs text-blue-100 group-hover:text-blue-700 transition-colors">+91 6305790865</p>
+                                    </div>
+                                </a>
 
                                 {/* Location Card */}
-                                <div className="bg-white rounded-2xl p-4 shadow-xl hover:shadow-2xl transition-all hover:-translate-y-2 -mt-6 aspect-square flex flex-col items-center justify-center">
-                                    <div className="text-5xl mb-3">📍</div>
-                                    <h3 className="font-bold text-base mb-1">Visit</h3>
-                                    <p className="text-xs text-gray-600">Hyderabad, India</p>
-                                </div>
+                                <a href="https://www.google.com/maps/search/?api=1&query=Hyderabad,+India" target="_blank" rel="noopener noreferrer" className="group bg-white rounded-2xl p-4 shadow-xl hover:shadow-2xl transition-all hover:-translate-y-2 -mt-6 aspect-square flex flex-col items-center justify-center cursor-pointer relative overflow-hidden">
+                                    <div className="absolute bottom-0 left-0 w-full h-0 group-hover:h-full bg-gradient-to-br from-gray-700 to-gray-900 transition-all duration-500 ease-out z-0"></div>
+                                    <div className="relative z-10 flex flex-col items-center">
+                                        <div className="text-5xl mb-3 group-hover:scale-110 transition-transform">📍</div>
+                                        <h3 className="font-bold text-base mb-1 text-gray-900 group-hover:text-white transition-colors">Visit</h3>
+                                        <p className="text-xs text-gray-600 group-hover:text-gray-100 transition-colors">Hyderabad, India</p>
+                                    </div>
+                                </a>
 
                                 {/* WhatsApp Card */}
-                                <div className="bg-gradient-to-br from-green-500 to-green-600 rounded-2xl p-4 text-white shadow-xl hover:shadow-2xl transition-all hover:-translate-y-2 aspect-square flex flex-col items-center justify-center">
-                                    <div className="text-5xl mb-3">💬</div>
-                                    <h3 className="font-bold text-base mb-1">Chat</h3>
-                                    <p className="text-xs text-green-100">WhatsApp</p>
-                                </div>
+                                <a href="https://wa.me/916305790865" target="_blank" rel="noopener noreferrer" className="group bg-gradient-to-br from-green-500 to-green-600 rounded-2xl p-4 shadow-xl hover:shadow-2xl transition-all hover:-translate-y-2 aspect-square flex flex-col items-center justify-center cursor-pointer relative overflow-hidden">
+                                    <div className="absolute bottom-0 left-0 w-full h-0 group-hover:h-full bg-white transition-all duration-500 ease-out z-0"></div>
+                                    <div className="relative z-10 flex flex-col items-center">
+                                        <div className="text-5xl mb-3 group-hover:scale-110 transition-transform">💬</div>
+                                        <h3 className="font-bold text-base mb-1 text-white group-hover:text-green-900 transition-colors">Chat</h3>
+                                        <p className="text-xs text-green-100 group-hover:text-green-700 transition-colors">WhatsApp</p>
+                                    </div>
+                                </a>
                             </div>
                         </div>
                     </div>

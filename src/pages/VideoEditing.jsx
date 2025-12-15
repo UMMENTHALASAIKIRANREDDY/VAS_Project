@@ -72,24 +72,36 @@ const VideoEditing = () => {
                         {/* Right - Visual Design */}
                         <div className="relative" data-aos="fade-left">
                             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                                <div className="bg-gradient-to-br from-orange-400 to-red-500 rounded-3xl p-8 text-white shadow-xl hover:shadow-2xl transition-all hover:-translate-y-2 aspect-square flex flex-col items-center justify-center">
-                                    <div className="text-7xl mb-4">🎥</div>
-                                    <h3 className="font-bold text-lg">Video Editing</h3>
+                                <div className="group bg-gradient-to-br from-orange-400 to-red-500 rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all hover:-translate-y-2 aspect-square flex flex-col items-center justify-center relative overflow-hidden">
+                                    <div className="absolute bottom-0 left-0 w-full h-0 group-hover:h-full bg-white transition-all duration-500 ease-out z-0"></div>
+                                    <div className="relative z-10 flex flex-col items-center">
+                                        <div className="text-7xl mb-4 group-hover:scale-110 transition-transform">🎥</div>
+                                        <h3 className="font-bold text-lg text-white group-hover:text-orange-900 transition-colors">Video Editing</h3>
+                                    </div>
                                 </div>
 
-                                <div className="bg-white rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all hover:-translate-y-2 mt-0 sm:mt-12 aspect-square flex flex-col items-center justify-center">
-                                    <div className="text-7xl mb-4">📸</div>
-                                    <h3 className="font-bold text-lg text-gray-900">Photo Retouching</h3>
+                                <div className="group bg-white rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all hover:-translate-y-2 mt-0 sm:mt-12 aspect-square flex flex-col items-center justify-center relative overflow-hidden">
+                                    <div className="absolute bottom-0 left-0 w-full h-0 group-hover:h-full bg-gradient-to-br from-orange-500 to-red-600 transition-all duration-500 ease-out z-0"></div>
+                                    <div className="relative z-10 flex flex-col items-center">
+                                        <div className="text-7xl mb-4 group-hover:scale-110 transition-transform">📸</div>
+                                        <h3 className="font-bold text-lg text-gray-900 group-hover:text-white transition-colors">Photo Retouching</h3>
+                                    </div>
                                 </div>
 
-                                <div className="bg-white rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all hover:-translate-y-2 mt-4 sm:-mt-12 aspect-square flex flex-col items-center justify-center">
-                                    <div className="text-7xl mb-4">🎬</div>
-                                    <h3 className="font-bold text-lg text-gray-900">Production</h3>
+                                <div className="group bg-white rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all hover:-translate-y-2 mt-4 sm:-mt-12 aspect-square flex flex-col items-center justify-center relative overflow-hidden">
+                                    <div className="absolute bottom-0 left-0 w-full h-0 group-hover:h-full bg-gradient-to-br from-orange-500 to-red-600 transition-all duration-500 ease-out z-0"></div>
+                                    <div className="relative z-10 flex flex-col items-center">
+                                        <div className="text-7xl mb-4 group-hover:scale-110 transition-transform">🎬</div>
+                                        <h3 className="font-bold text-lg text-gray-900 group-hover:text-white transition-colors">Production</h3>
+                                    </div>
                                 </div>
 
-                                <div className="bg-gradient-to-br from-red-400 to-orange-500 rounded-3xl p-8 text-white shadow-xl hover:shadow-2xl transition-all hover:-translate-y-2 mt-4 sm:mt-0 aspect-square flex flex-col items-center justify-center">
-                                    <div className="text-7xl mb-4">✨</div>
-                                    <h3 className="font-bold text-lg">Effects</h3>
+                                <div className="group bg-gradient-to-br from-red-400 to-orange-500 rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all hover:-translate-y-2 mt-4 sm:mt-0 aspect-square flex flex-col items-center justify-center relative overflow-hidden">
+                                    <div className="absolute bottom-0 left-0 w-full h-0 group-hover:h-full bg-white transition-all duration-500 ease-out z-0"></div>
+                                    <div className="relative z-10 flex flex-col items-center">
+                                        <div className="text-7xl mb-4 group-hover:scale-110 transition-transform">✨</div>
+                                        <h3 className="font-bold text-lg text-white group-hover:text-red-900 transition-colors">Effects</h3>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -130,16 +142,22 @@ const VideoEditing = () => {
                         </div>
 
                         {/* Medium Cards */}
-                        <div className="md:col-span-2 group bg-white border-2 border-orange-100 rounded-2xl p-8 hover:border-orange-300 hover:shadow-xl transition-all hover:-translate-y-2" data-aos="fade-up" data-aos-delay="100">
-                            <div className="text-5xl mb-4 group-hover:scale-110 transition-transform">🎥</div>
-                            <h3 className="text-xl font-bold mb-3 text-gray-900">Event Videos</h3>
-                            <p className="text-gray-600 text-sm">Cinematic coverage and editing for weddings, corporate events, and special occasions</p>
+                        <div className="md:col-span-2 group bg-white border-2 border-orange-100 rounded-2xl p-8 hover:border-orange-300 hover:shadow-xl transition-all hover:-translate-y-2 hover:border-transparent relative overflow-hidden" data-aos="fade-up" data-aos-delay="100">
+                            <div className="absolute bottom-0 left-0 w-full h-0 group-hover:h-full bg-gradient-to-br from-orange-500 to-red-600 transition-all duration-500 ease-out z-0"></div>
+                            <div className="relative z-10">
+                                <div className="text-5xl mb-4 group-hover:scale-110 transition-transform">🎥</div>
+                                <h3 className="text-xl font-bold mb-3 text-gray-900 group-hover:text-white transition-colors">Event Videos</h3>
+                                <p className="text-gray-600 text-sm group-hover:text-orange-100 transition-colors">Cinematic coverage and editing for weddings, corporate events, and special occasions</p>
+                            </div>
                         </div>
 
-                        <div className="md:col-span-2 group bg-white border-2 border-orange-100 rounded-2xl p-8 hover:border-orange-300 hover:shadow-xl transition-all hover:-translate-y-2" data-aos="fade-up" data-aos-delay="200">
-                            <div className="text-5xl mb-4 group-hover:scale-110 transition-transform">🎬</div>
-                            <h3 className="text-xl font-bold mb-3 text-gray-900">Promotional Videos</h3>
-                            <p className="text-gray-600 text-sm">Engaging promotional content for marketing campaigns and social media</p>
+                        <div className="md:col-span-2 group bg-white border-2 border-orange-100 rounded-2xl p-8 hover:border-orange-300 hover:shadow-xl transition-all hover:-translate-y-2 hover:border-transparent relative overflow-hidden" data-aos="fade-up" data-aos-delay="200">
+                            <div className="absolute bottom-0 left-0 w-full h-0 group-hover:h-full bg-gradient-to-br from-orange-500 to-red-600 transition-all duration-500 ease-out z-0"></div>
+                            <div className="relative z-10">
+                                <div className="text-5xl mb-4 group-hover:scale-110 transition-transform">🎬</div>
+                                <h3 className="text-xl font-bold mb-3 text-gray-900 group-hover:text-white transition-colors">Promotional Videos</h3>
+                                <p className="text-gray-600 text-sm group-hover:text-orange-100 transition-colors">Engaging promotional content for marketing campaigns and social media</p>
+                            </div>
                         </div>
 
                         {/* Small Cards */}
@@ -149,10 +167,13 @@ const VideoEditing = () => {
                             <p className="text-sm text-orange-100">Professional correction</p>
                         </div>
 
-                        <div className="group bg-white border-2 border-orange-100 rounded-2xl p-6 hover:border-orange-300 hover:shadow-xl transition-all hover:-translate-y-2" data-aos="fade-up" data-aos-delay="400">
-                            <div className="text-4xl mb-3">✨</div>
-                            <h3 className="text-lg font-bold mb-2 text-gray-900">Motion Graphics</h3>
-                            <p className="text-sm text-gray-600">Eye-catching animations</p>
+                        <div className="group bg-white border-2 border-orange-100 rounded-2xl p-6 hover:border-orange-300 hover:shadow-xl transition-all hover:-translate-y-2 hover:border-transparent relative overflow-hidden" data-aos="fade-up" data-aos-delay="400">
+                            <div className="absolute bottom-0 left-0 w-full h-0 group-hover:h-full bg-gradient-to-br from-orange-500 to-red-600 transition-all duration-500 ease-out z-0"></div>
+                            <div className="relative z-10">
+                                <div className="text-4xl mb-3">✨</div>
+                                <h3 className="text-lg font-bold mb-2 text-gray-900 group-hover:text-white transition-colors">Motion Graphics</h3>
+                                <p className="text-sm text-gray-600 group-hover:text-orange-100 transition-colors">Eye-catching animations</p>
+                            </div>
                         </div>
 
                         <div className="md:col-span-2 group bg-gradient-to-br from-orange-500 to-red-600 rounded-2xl p-8 text-white hover:shadow-xl transition-all hover:-translate-y-2" data-aos="fade-up" data-aos-delay="500">

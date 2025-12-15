@@ -73,24 +73,36 @@ const SoftwareServices = () => {
                         {/* Right - Visual Design */}
                         <div className="relative" data-aos="fade-left">
                             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                                <div className="bg-white rounded-3xl p-6 shadow-xl hover:shadow-2xl transition-all hover:-translate-y-2 aspect-square flex flex-col items-center justify-center text-center">
-                                    <div className="text-5xl md:text-6xl mb-3">💻</div>
-                                    <span className="font-bold text-gray-800 text-sm md:text-base">Development</span>
+                                <div className="group bg-white rounded-3xl p-6 shadow-xl hover:shadow-2xl transition-all hover:-translate-y-2 aspect-square flex flex-col items-center justify-center text-center relative overflow-hidden">
+                                    <div className="absolute bottom-0 left-0 w-full h-0 group-hover:h-full bg-gradient-to-br from-teal-500 to-cyan-600 transition-all duration-500 ease-out z-0"></div>
+                                    <div className="relative z-10 flex flex-col items-center">
+                                        <div className="text-5xl md:text-6xl mb-3 group-hover:scale-110 transition-transform">💻</div>
+                                        <span className="font-bold text-gray-800 text-sm md:text-base group-hover:text-white transition-colors">Development</span>
+                                    </div>
                                 </div>
 
-                                <div className="bg-gradient-to-br from-teal-400 to-cyan-500 rounded-3xl p-6 text-white shadow-xl hover:shadow-2xl transition-all hover:-translate-y-2 mt-0 sm:mt-12 aspect-square flex flex-col items-center justify-center text-center">
-                                    <div className="text-5xl md:text-6xl mb-3">🔧</div>
-                                    <span className="font-bold text-white text-sm md:text-base">Maintenance</span>
+                                <div className="group bg-gradient-to-br from-teal-400 to-cyan-500 rounded-3xl p-6 shadow-xl hover:shadow-2xl transition-all hover:-translate-y-2 mt-0 sm:mt-12 aspect-square flex flex-col items-center justify-center text-center relative overflow-hidden">
+                                    <div className="absolute bottom-0 left-0 w-full h-0 group-hover:h-full bg-white transition-all duration-500 ease-out z-0"></div>
+                                    <div className="relative z-10 flex flex-col items-center">
+                                        <div className="text-5xl md:text-6xl mb-3 group-hover:scale-110 transition-transform">🔧</div>
+                                        <span className="font-bold text-white text-sm md:text-base group-hover:text-teal-900 transition-colors">Maintenance</span>
+                                    </div>
                                 </div>
 
-                                <div className="bg-gradient-to-br from-cyan-400 to-teal-500 rounded-3xl p-6 text-white shadow-xl hover:shadow-2xl transition-all hover:-translate-y-2 mt-4 sm:-mt-12 aspect-square flex flex-col items-center justify-center text-center">
-                                    <div className="text-5xl md:text-6xl mb-3">⚡</div>
-                                    <span className="font-bold text-white text-sm md:text-base">Performance</span>
+                                <div className="group bg-gradient-to-br from-cyan-400 to-teal-500 rounded-3xl p-6 shadow-xl hover:shadow-2xl transition-all hover:-translate-y-2 mt-4 sm:-mt-12 aspect-square flex flex-col items-center justify-center text-center relative overflow-hidden">
+                                    <div className="absolute bottom-0 left-0 w-full h-0 group-hover:h-full bg-white transition-all duration-500 ease-out z-0"></div>
+                                    <div className="relative z-10 flex flex-col items-center">
+                                        <div className="text-5xl md:text-6xl mb-3 group-hover:scale-110 transition-transform">⚡</div>
+                                        <span className="font-bold text-white text-sm md:text-base group-hover:text-teal-900 transition-colors">Performance</span>
+                                    </div>
                                 </div>
 
-                                <div className="bg-white rounded-3xl p-6 shadow-xl hover:shadow-2xl transition-all hover:-translate-y-2 mt-4 sm:mt-0 aspect-square flex flex-col items-center justify-center text-center">
-                                    <div className="text-5xl md:text-6xl mb-3">✅</div>
-                                    <span className="font-bold text-gray-800 text-sm md:text-base">Quality</span>
+                                <div className="group bg-white rounded-3xl p-6 shadow-xl hover:shadow-2xl transition-all hover:-translate-y-2 mt-4 sm:mt-0 aspect-square flex flex-col items-center justify-center text-center relative overflow-hidden">
+                                    <div className="absolute bottom-0 left-0 w-full h-0 group-hover:h-full bg-gradient-to-br from-teal-500 to-cyan-600 transition-all duration-500 ease-out z-0"></div>
+                                    <div className="relative z-10 flex flex-col items-center">
+                                        <div className="text-5xl md:text-6xl mb-3 group-hover:scale-110 transition-transform">✅</div>
+                                        <span className="font-bold text-gray-800 text-sm md:text-base group-hover:text-white transition-colors">Quality</span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -114,15 +126,19 @@ const SoftwareServices = () => {
                         {services.map((service, index) => (
                             <div
                                 key={index}
-                                className={`group bg-white rounded-2xl p-8 border-2 border-teal-100 hover:border-teal-300 hover:shadow-xl transition-all duration-300 hover:-translate-y-2 ${index % 2 === 1 ? 'md:mt-8' : ''
+                                className={`group bg-white rounded-2xl p-8 border-2 border-teal-100 hover:border-teal-300 hover:shadow-xl transition-all duration-300 hover:-translate-y-2 hover:border-transparent relative overflow-hidden ${index % 2 === 1 ? 'md:mt-8' : ''
                                     }`}
                                 data-aos="fade-up"
                                 data-aos-delay={index * 100}
                             >
-                                <div className="text-5xl mb-4 group-hover:scale-110 transition-transform">{service.icon}</div>
-                                <h3 className="text-xl font-bold mb-3 text-gray-900">{service.title}</h3>
-                                <p className="text-gray-600 mb-4">{service.description}</p>
-                                <div className={`h-1 w-12 bg-gradient-to-r ${service.color} rounded-full group-hover:w-full transition-all`}></div>
+                                <div className="absolute bottom-0 left-0 w-full h-0 group-hover:h-full bg-gradient-to-br from-teal-500 to-cyan-600 transition-all duration-500 ease-out z-0"></div>
+
+                                <div className="relative z-10">
+                                    <div className="text-5xl mb-4 group-hover:scale-110 transition-transform">{service.icon}</div>
+                                    <h3 className="text-xl font-bold mb-3 text-gray-900 group-hover:text-white transition-colors">{service.title}</h3>
+                                    <p className="text-gray-600 mb-4 group-hover:text-teal-100 transition-colors">{service.description}</p>
+                                    <div className={`h-1 w-12 bg-gradient-to-r ${service.color} rounded-full group-hover:w-full transition-all group-hover:bg-none group-hover:bg-white`}></div>
+                                </div>
                             </div>
                         ))}
                     </div>

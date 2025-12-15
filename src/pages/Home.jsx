@@ -7,116 +7,131 @@ const Home = () => {
             icon: '🏠',
             description: 'Transform your living spaces with our premium 3D modeling and layout planning services.',
             link: '/interior-design',
-            color: 'blue'
+            styles: {
+                hoverGradient: 'hover:from-blue-500 hover:to-blue-600',
+                shadow: 'hover:shadow-blue-500/30',
+                blurBg: 'bg-blue-500/5',
+                iconBg: 'from-blue-500 to-blue-600',
+                iconShadow: 'shadow-blue-500/30',
+                iconTextHover: 'group-hover:text-blue-600'
+            }
         },
         {
             title: 'Video Editing',
             icon: '🎬',
             description: 'Professional video production, event coverage, and cinematic storytelling.',
             link: '/video-editing',
-            color: 'purple'
+            styles: {
+                hoverGradient: 'hover:from-purple-500 hover:to-purple-600',
+                shadow: 'hover:shadow-purple-500/30',
+                blurBg: 'bg-purple-500/5',
+                iconBg: 'from-purple-500 to-purple-600',
+                iconShadow: 'shadow-purple-500/30',
+                iconTextHover: 'group-hover:text-purple-600'
+            }
         },
         {
             title: 'Software Services',
             icon: '💻',
             description: 'Comprehensive QA testing and software solutions to ensure digital excellence.',
             link: '/software-services',
-            color: 'emerald'
+            styles: {
+                hoverGradient: 'hover:from-emerald-500 hover:to-emerald-600',
+                shadow: 'hover:shadow-emerald-500/30',
+                blurBg: 'bg-emerald-500/5',
+                iconBg: 'from-emerald-500 to-emerald-600',
+                iconShadow: 'shadow-emerald-500/30',
+                iconTextHover: 'group-hover:text-emerald-600'
+            }
         },
     ];
 
     return (
-        <div className="animate-fade-in overflow-hidden">
-            {/* Hero Section */}
-            <section className="relative min-h-[90vh] flex items-center bg-slate-900 border-b border-gray-800">
-                {/* Abstract Background */}
-                <div className="absolute inset-0 overflow-hidden">
-                    <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-sky-500/20 rounded-full blur-[120px] -translate-y-1/2 translate-x-1/3"></div>
-                    <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-purple-500/20 rounded-full blur-[100px] translate-y-1/3 -translate-x-1/3"></div>
-                </div>
+        <div className="animate-fade-in overflow-hidden font-sans">
+            {/* Simple & Neat Hero Section */}
+            <section className="relative pt-20 pb-20 lg:pt-32 lg:pb-32 bg-gradient-to-b from-slate-50 to-white overflow-hidden">
+                <div className="max-w-7xl mx-auto px-6 lg:px-8">
+                    <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
 
-                <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 w-full pt-20">
-                    <div className="grid lg:grid-cols-2 gap-12 items-center">
-                        <div className="text-center lg:text-left">
-                            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 backdrop-blur-sm mb-6" data-aos="fade-down">
-                                <span className="w-2 h-2 rounded-full bg-sky-400 animate-pulse"></span>
-                                <span className="text-sky-300 text-sm font-medium tracking-wide">Innovating Since 2019</span>
+                        {/* Left: Content */}
+                        <div className="text-center lg:text-left" data-aos="fade-up">
+                            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-50 border border-indigo-100 text-indigo-600/90 text-sm font-medium mb-8">
+                                <span className="relative flex h-2 w-2">
+                                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-indigo-400 opacity-75"></span>
+                                    <span className="relative inline-flex rounded-full h-2 w-2 bg-indigo-500"></span>
+                                </span>
+                                Welcome to VAS
                             </div>
 
-                            <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold text-white mb-6 leading-tight tracking-tight" data-aos="fade-up" data-aos-delay="100">
-                                Designing <br />
-                                <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-400 via-indigo-400 to-purple-400">Experiences.</span>
+                            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-slate-900 leading-[1.1] mb-6 tracking-tight">
+                                Creative Spaces & <br />
+                                <span className="text-indigo-600">Digital Solutions</span>
                             </h1>
 
-                            <p className="text-lg text-gray-400 mb-8 max-w-xl mx-auto lg:mx-0 leading-relaxed" data-aos="fade-up" data-aos-delay="200">
-                                From stunning interior spaces to captivating video content and flawless software performance, VAS delivers excellence across every dimension.
+                            <p className="text-lg text-slate-600 mb-10 max-w-lg mx-auto lg:mx-0 leading-relaxed">
+                                We combine artistic vision with technical expertise. From premium interior design to software excellence, we bring your ideas to life.
                             </p>
 
-                            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start" data-aos="fade-up" data-aos-delay="300">
+                            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
                                 <Link
                                     to="/contact"
-                                    className="px-8 py-4 bg-sky-600 hover:bg-sky-500 text-white rounded-xl font-semibold transition-all hover:scale-105 shadow-lg shadow-sky-500/25 flex items-center justify-center gap-2"
+                                    className="px-8 py-3.5 bg-slate-900 text-white rounded-xl font-semibold hover:bg-slate-800 transition-colors shadow-lg shadow-slate-900/10"
                                 >
-                                    Start Your Project
-                                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+                                    Start a Project
                                 </Link>
-                                <div className="flex gap-4 sm:gap-8 px-8 py-4 rounded-xl border border-white/10 bg-white/5 backdrop-blur-sm justify-center">
-                                    <div className="text-center">
-                                        <div className="text-2xl font-bold text-white">2+</div>
-                                        <div className="text-xs text-gray-400 uppercase tracking-wider">Clients</div>
-                                    </div>
-                                    <div className="w-px bg-white/10"></div>
-                                    <div className="text-center">
-                                        <div className="text-2xl font-bold text-white">100%</div>
-                                        <div className="text-xs text-gray-400 uppercase tracking-wider">Success</div>
-                                    </div>
+                                <a
+                                    href="#services"
+                                    className="px-8 py-3.5 bg-white text-slate-700 border border-slate-200 rounded-xl font-semibold hover:bg-slate-50 hover:border-slate-300 transition-all"
+                                >
+                                    View Services
+                                </a>
+                            </div>
+
+                            <div className="mt-12 flex items-center justify-center lg:justify-start gap-8 text-slate-500">
+                                <div className="flex items-center gap-2">
+                                    <svg className="w-5 h-5 text-indigo-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
+                                    <span className="text-sm font-medium">Verified Experts</span>
+                                </div>
+                                <div className="flex items-center gap-2">
+                                    <svg className="w-5 h-5 text-indigo-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                                    <span className="text-sm font-medium">On-time Delivery</span>
                                 </div>
                             </div>
                         </div>
 
-                        {/* Hero Visual */}
-                        <div className="relative lg:h-[600px] hidden lg:block" data-aos="fade-left">
-                            <div className="absolute inset-0 bg-gradient-to-tr from-sky-500/10 to-purple-500/10 rounded-full blur-3xl"></div>
-                            <div className="glass-card absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-md aspect-square rounded-[3rem] border border-white/10 bg-white/5 backdrop-blur-md overflow-hidden shadow-2xl">
-                                <div className="absolute inset-0 bg-gradient-to-br from-sky-500/10 to-transparent"></div>
-                                <div className="p-12 h-full flex flex-col justify-between relative">
-                                    <div className="flex justify-between items-start">
-                                        <div className="p-4 bg-sky-500/20 rounded-2xl">
-                                            <span className="text-4xl">🎨</span>
+                        {/* Right: Modern Image Card */}
+                        <div className="relative" data-aos="fade-left">
+                            <div className="relative rounded-3xl overflow-hidden shadow-2xl shadow-indigo-500/10 bg-slate-100">
+                                <img
+                                    src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=1200"
+                                    alt="Modern Office Design"
+                                    className="w-full h-auto object-cover transform hover:scale-105 transition-transform duration-700"
+                                />
+                                {/* Glass box overlay */}
+                                <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/60 to-transparent">
+                                    <div className="backdrop-blur-md bg-white/10 border border-white/20 p-4 rounded-2xl flex items-center gap-4">
+                                        <div className="w-10 h-10 rounded-full bg-indigo-500 flex items-center justify-center text-white text-xl">
+                                            ✨
                                         </div>
-                                        <div className="flex -space-x-4">
-                                            {[1, 2, 3].map((i) => (
-                                                <div key={i} className="w-12 h-12 rounded-full border-2 border-gray-800 bg-gray-700 flex items-center justify-center text-xs">
-                                                    User
-                                                </div>
-                                            ))}
-                                        </div>
-                                    </div>
-
-                                    <div className="space-y-4">
-                                        <div className="h-2 w-3/4 bg-white/10 rounded-full"></div>
-                                        <div className="h-2 w-1/2 bg-white/10 rounded-full"></div>
-                                        <div className="h-32 w-full bg-gradient-to-r from-sky-500/20 to-purple-500/20 rounded-2xl flex items-center justify-center border border-white/5 mt-6">
-                                            <span className="text-white/50 text-sm tracking-widest font-mono">DIGITAL EXCELLENCE</span>
+                                        <div>
+                                            <p className="text-white font-semibold text-sm">Design & Logic</p>
+                                            <p className="text-white/80 text-xs">Crafting experiences that matter</p>
                                         </div>
                                     </div>
                                 </div>
                             </div>
 
-                            {/* Floating Elements */}
-                            <div className="absolute top-20 right-20 p-4 bg-gray-800/80 backdrop-blur border border-gray-700 rounded-2xl shadow-xl animate-float-slow">
-                                <span className="text-3xl">💻</span>
-                            </div>
-                            <div className="absolute bottom-40 left-10 p-4 bg-gray-800/80 backdrop-blur border border-gray-700 rounded-2xl shadow-xl animate-float" style={{ animationDelay: '1s' }}>
-                                <span className="text-3xl">🎬</span>
-                            </div>
+                            {/* Decorative background circle */}
+                            <div className="absolute -top-12 -right-12 w-64 h-64 bg-indigo-50 rounded-full blur-3xl -z-10 opacity-60"></div>
+                            <div className="absolute -bottom-12 -left-12 w-64 h-64 bg-blue-50 rounded-full blur-3xl -z-10 opacity-60"></div>
                         </div>
+
                     </div>
                 </div>
             </section>
 
             {/* Services Section */}
-            <section className="py-24 px-4 bg-gray-50">
+            <section id="services" className="py-24 px-4 bg-gray-50">
                 <div className="max-w-7xl mx-auto">
                     <div className="text-center mb-16">
                         <span className="text-sky-600 font-semibold tracking-wider uppercase text-sm">What We Do</span>
@@ -128,22 +143,26 @@ const Home = () => {
                             <Link
                                 key={index}
                                 to={service.link}
-                                className="group relative bg-white rounded-3xl p-8 hover:-translate-y-2 transition-all duration-300 shadow-xl shadow-gray-200/50 hover:shadow-2xl hover:shadow-sky-500/10 border border-gray-100 overflow-hidden"
+                                className={`group relative bg-white rounded-3xl p-8 hover:-translate-y-2 transition-all duration-300 shadow-xl shadow-gray-200/50 hover:shadow-2xl ${service.styles.shadow} border border-gray-100 overflow-hidden hover:border-transparent`}
                                 data-aos="fade-up"
                                 data-aos-delay={index * 100}
                             >
-                                <div className={`absolute top-0 right-0 w-32 h-32 bg-${service.color}-500/5 rounded-full blur-3xl group-hover:bg-${service.color}-500/10 transition-colors`}></div>
+                                <div className={`absolute bottom-0 left-0 w-full h-0 group-hover:h-full bg-gradient-to-br ${service.styles.iconBg} transition-all duration-500 ease-out z-0`}></div>
 
-                                <div className={`w-14 h-14 rounded-2xl bg-gradient-to-br from-${service.color}-500 to-${service.color}-600 flex items-center justify-center text-2xl mb-6 shadow-lg shadow-${service.color}-500/30 group-hover:scale-110 transition-transform duration-300`}>
-                                    {service.icon}
-                                </div>
+                                <div className="relative z-10">
+                                    <div className={`absolute top-0 right-0 w-32 h-32 ${service.styles.blurBg} rounded-full blur-3xl group-hover:bg-white/10 transition-colors`}></div>
 
-                                <h3 className="text-xl font-bold text-gray-900 mb-3">{service.title}</h3>
-                                <p className="text-gray-600 mb-6 leading-relaxed">{service.description}</p>
+                                    <div className={`w-14 h-14 rounded-2xl bg-gradient-to-br ${service.styles.iconBg} flex items-center justify-center text-2xl mb-6 shadow-lg ${service.styles.iconShadow} group-hover:scale-110 transition-transform duration-300 group-hover:from-white group-hover:to-white ${service.styles.iconTextHover}`}>
+                                        {service.icon}
+                                    </div>
 
-                                <div className={`flex items-center text-${service.color}-600 font-semibold group-hover:gap-2 transition-all`}>
-                                    Explore Service
-                                    <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
+                                    <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-white transition-colors">{service.title}</h3>
+                                    <p className="text-gray-600 mb-6 leading-relaxed group-hover:text-white/90 transition-colors">{service.description}</p>
+
+                                    <div className={`flex items-center text-black font-semibold group-hover:gap-2 transition-all group-hover:text-white`}>
+                                        Explore Service
+                                        <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
+                                    </div>
                                 </div>
                             </Link>
                         ))}
